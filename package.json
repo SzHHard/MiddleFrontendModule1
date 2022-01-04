@@ -4,11 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "parcel index.ejs --port 3000 --dist-dir build",
+    "build": "parcel build index.ejs --dist-dir build"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "parcel": "^2.0.1"
+    "parcel": "^2.0.1",
+    "parcel-transformer-ejs": "^0.2.0"
   }
 }

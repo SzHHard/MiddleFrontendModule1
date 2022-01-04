@@ -1,0 +1,38 @@
+
+
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <script src="/index.8c718e25.js" defer=""></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    
+
+    <h2>test</h2>
+    <div id="root"> </div>
+    
+    <div id="root2">
+    <p> heeey! heeey! I&#39;m the dynamic text) -- слева от меня должен быть dynamicText</p> 
+        lalala plain
+    </div>
+
+
+    <script>let elem = document.querySelector('#root2');
+console.log(elem);
+let rawTemplate = elem.innerHTML;
+console.log(rawTemplate) // let compiledTemplate = Handlebars.compile(rawTemplate);
+;
+
+</script>
+
+</body>
+
+</html>
