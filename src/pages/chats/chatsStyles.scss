@@ -1,0 +1,43 @@
+.chatsBlock{
+    margin: 0 auto;
+    border: 2px solid orange; 
+    width: 800px; // testValues
+    height: 800px;
+    display: flex;
+    flex-direction: column;
+
+    .chatsBlock__searchbarContainer{
+        height: 40px; 
+        display: flex;
+        flex-direction: row;
+
+
+        input{
+            height: 95%;
+        }
+
+        .searchbarContainer__createGroupChatButton{
+            color: aqua;
+        }
+    }
+}
+
+.chatsBlock__chatPreviewContainer{
+    
+    display: flex;
+    flex-direction: row;
+    img{
+        height: 15px;
+        width: 15px;
+        border-radius: 50px;
+    }
+    .chatPreview{
+
+        .dialogName{
+            font-weight: 700;
+        }
+        .dialogLastMessage{
+
+        }
+    }
+}

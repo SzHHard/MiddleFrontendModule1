@@ -13,5 +13,8 @@
     "@parcel/transformer-sass": "^2.0.1",
     "parcel": "^2.0.1",
     "parcel-transformer-ejs": "^0.2.0"
+  },
+  "dependencies": {
+    "ejs": "^3.1.6"
   }
 }
