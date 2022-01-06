@@ -465,16 +465,16 @@ var _ejsDefault = parcelHelpers.interopDefault(_ejs);
 var _notFoundScreenTmpl = require("./notFoundScreen.tmpl");
 let object = {
 };
-let page404 = _ejsDefault.default.render(_notFoundScreenTmpl.template, object);
+let page404 = _ejsDefault.default.render(_notFoundScreenTmpl.screen404, object);
 let root = document.querySelector('#root');
 if (window.location.pathname !== '/') root.innerHTML = page404;
 
 },{"ejs":"doTCF","./notFoundScreen.tmpl":"jBpda","@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV"}],"jBpda":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "template", ()=>template
+parcelHelpers.export(exports, "screen404", ()=>screen404
 );
-let template = /* html */ `
+let screen404 = /* html */ `
     <div class='errScreen'> 
         <div class='errScreen__bar_top'></div>
         <div class='vector'> </div>

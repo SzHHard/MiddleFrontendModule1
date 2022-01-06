@@ -473,9 +473,8 @@ let data = {
     avatar2: _2PngDefault.default
 };
 let template = _ejsDefault.default.render(_chatsTmplJs.chats, data);
-const elem = document.querySelector('#chatsPreviewPage');
+const elem = document.querySelector('#mainContent');
 elem.innerHTML = template; //потом, возможно, поменять innerHTML на другие слова
-console.log(_chatsTmplJs.chats);
 
 },{"./chats.tmpl.js":"atDUk","ejs":"doTCF","../../../static/avatars/szh.jpg":"bExHq","../../../static/avatars/2.png":"cJM9J","@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV"}],"atDUk":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");

@@ -152,6 +152,34 @@
   z-index: 10;
 }
 
+.header {
+  height: 70px;
+  background-color: #292525;
+  display: flex;
+  justify-content: space-between;
+}
+.header h2 {
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: 20px;
+  align-self: center;
+  color: #2fb6a6;
+  font-family: Rasa;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 36px;
+}
+.header .imgContainer {
+  margin-right: 20px;
+  display: flex;
+}
+.header .imgContainer img {
+  height: 50px;
+  width: 50px;
+  border-radius: 50px;
+  align-self: center;
+}
+
 body {
   background-color: #FAEDFC;
   height: 100%;

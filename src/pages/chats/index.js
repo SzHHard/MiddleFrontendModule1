@@ -11,8 +11,6 @@ let data = {
 
 let template = ejs.render(chats, data);
 
-const elem = document.querySelector('#chatsPreviewPage');
+const elem = document.querySelector('#mainContent');
 
 elem.innerHTML = template;  //потом, возможно, поменять innerHTML на другие слова
-
-console.log(chats);
