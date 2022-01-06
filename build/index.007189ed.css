@@ -5,11 +5,13 @@
   height: 800px;
   display: flex;
   flex-direction: column;
+  padding: 10px;
 }
 .chatsBlock .chatsBlock__searchbarContainer {
   height: 40px;
   display: flex;
   flex-direction: row;
+  margin-bottom: 20px;
 }
 .chatsBlock .chatsBlock__searchbarContainer input {
   height: 95%;
@@ -19,17 +21,148 @@
 }
 
 .chatsBlock__chatPreviewContainer {
+  width: 100%;
+  height: 40px;
   display: flex;
   flex-direction: row;
+  margin-bottom: 10px;
+  border-bottom: 1px solid grey;
 }
 .chatsBlock__chatPreviewContainer img {
-  height: 15px;
-  width: 15px;
+  height: 30px;
+  width: 30px;
   border-radius: 50px;
+}
+.chatsBlock__chatPreviewContainer .chatPreview {
+  margin-left: 10px;
 }
 .chatsBlock__chatPreviewContainer .chatPreview .dialogName {
   font-weight: 700;
 }
+.errScreen {
+  height: 100%;
+}
+.errScreen .errScreen__bar_top {
+  height: 50px;
+  width: 100%;
+  background-color: #292525;
+}
+.errScreen .errScreen__bar_bottom {
+  height: 50px;
+  width: 100%;
+  background-color: #292525;
+  position: absolute;
+  bottom: 0;
+}
+.errScreen h2 {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 48px;
+  color: #ed8686;
+  text-align: center;
+}
+.errScreen h3 {
+  display: block;
+  width: 660px;
+  font-family: Montserrat;
+  font-style: italic;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 37px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 100px;
+  margin-top: 202px;
+}
+.errScreen .redirect {
+  position: absolute;
+  z-index: 100;
+  right: 35px;
+  bottom: 125px;
+}
+.errScreen .redirect a {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 28px;
+  color: #4374d2;
+}
+.errScreen .redirect a:visited {
+  color: #4374d2;
+}
+.errScreen .vector {
+  position: absolute;
+  width: 288.5px;
+  height: 254.5px;
+  pointer-events: none;
+  background: linear-gradient(to top left, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) calc(50% - 0.8px), #fd1111 50%, rgba(0, 0, 0, 0) calc(50% + 0.8px), rgba(0, 0, 0, 0) 100%);
+  top: 0;
+}
+.errScreen .vector2 {
+  position: absolute;
+  width: 288.5px;
+  height: 254.5px;
+  left: 129px;
+  top: 0;
+  background: linear-gradient(to top left, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) calc(50% - 0.8px), #fd1111 50%, rgba(0, 0, 0, 0) calc(50% + 0.8px), rgba(0, 0, 0, 0) 100%);
+}
+.errScreen .vector3 {
+  position: absolute;
+  width: 288.5px;
+  height: 254.5px;
+  left: 260px;
+  top: 0;
+  background: linear-gradient(to top left, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) calc(50% - 0.8px), #fd1111 50%, rgba(0, 0, 0, 0) calc(50% + 0.8px), rgba(0, 0, 0, 0) 100%);
+}
+.errScreen .vector4 {
+  position: absolute;
+  width: 288.5px;
+  height: 254.5px;
+  left: 60.5px;
+  bottom: 0;
+  background: linear-gradient(to top left, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) calc(50% - 0.8px), #fd1111 50%, rgba(0, 0, 0, 0) calc(50% + 0.8px), rgba(0, 0, 0, 0) 100%);
+  z-index: 10;
+}
+.errScreen .vector5 {
+  position: absolute;
+  width: 288.5px;
+  height: 254.5px;
+  left: 205px;
+  bottom: 0;
+  background: linear-gradient(to top left, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) calc(50% - 0.8px), #fd1111 50%, rgba(0, 0, 0, 0) calc(50% + 0.8px), rgba(0, 0, 0, 0) 100%);
+  z-index: 10;
+}
+.errScreen .vector6 {
+  position: absolute;
+  width: 288.5px;
+  height: 254.5px;
+  left: 349px;
+  bottom: 0;
+  background: linear-gradient(to top left, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) calc(50% - 0.8px), #fd1111 50%, rgba(0, 0, 0, 0) calc(50% + 0.8px), rgba(0, 0, 0, 0) 100%);
+  z-index: 10;
+}
+.errScreen .vector7 {
+  position: absolute;
+  width: 288.5px;
+  height: 254.5px;
+  left: 493px;
+  bottom: 0;
+  background: linear-gradient(to top left, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) calc(50% - 0.8px), #fd1111 50%, rgba(0, 0, 0, 0) calc(50% + 0.8px), rgba(0, 0, 0, 0) 100%);
+  z-index: 10;
+}
+
+body {
+  background-color: #FAEDFC;
+  height: 100%;
+  margin: 0;
+}
+
+.root {
+  display: flex;
+  flex-direction: column;
+}
+
 .SummDiv {
   background-color: aqua;
 }

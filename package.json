@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "parcel index.ejs --port 3000 --dist-dir build",
-    "build": "parcel build index.ejs --dist-dir build"
+    "start": "parcel index.html --port 3000 --dist-dir build",
+    "build": "parcel build index.html --dist-dir build"
   },
   "author": "",
   "license": "ISC",

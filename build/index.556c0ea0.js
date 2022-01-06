@@ -465,21 +465,24 @@ var _ejs = require("ejs");
 var _ejsDefault = parcelHelpers.interopDefault(_ejs);
 var _szhJpg = require("../../../static/avatars/szh.jpg");
 var _szhJpgDefault = parcelHelpers.interopDefault(_szhJpg);
+var _2Png = require("../../../static/avatars/2.png");
+var _2PngDefault = parcelHelpers.interopDefault(_2Png);
 let data = {
     text: 'леее',
-    avatar: _szhJpgDefault.default
+    avatar1: _szhJpgDefault.default,
+    avatar2: _2PngDefault.default
 };
 let template = _ejsDefault.default.render(_chatsTmplJs.chats, data);
 const elem = document.querySelector('#chatsPreviewPage');
 elem.innerHTML = template; //потом, возможно, поменять innerHTML на другие слова
 console.log(_chatsTmplJs.chats);
 
-},{"./chats.tmpl.js":"atDUk","ejs":"doTCF","@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV","../../../static/avatars/szh.jpg":"bExHq"}],"atDUk":[function(require,module,exports) {
+},{"./chats.tmpl.js":"atDUk","ejs":"doTCF","../../../static/avatars/szh.jpg":"bExHq","../../../static/avatars/2.png":"cJM9J","@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV"}],"atDUk":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "chats", ()=>chats
 );
-let chats = `
+let chats = /* html */ `
 <div class='chatsBlock'>
     <div class = 'chatsBlock__searchbarContainer'>
         <input placeholder="Search" />
@@ -491,14 +494,14 @@ let chats = `
 
     <!-- тут нужно будет сделать цикл с выводом чатов -->
     <div class='chatsBlock__chatPreviewContainer'>
-        <img src= <%= avatar %> alt='avatar'>
+        <img src= <%= avatar1 %> alt='avatar'>
         <div class='chatPreview'>
             <div class='dialogName'> Mr Pointer </div>
             <div class='dialogLastMessage'> <%= text %> куда прешь </div>
         </div>
     </div>  
     <div class='chatsBlock__chatPreviewContainer'>
-        <img src= <%= avatar %> alt='avatar'>
+        <img src= <%= avatar2 %> alt='avatar'>
         <div class='chatPreview'>
             <div class='dialogName'> Mr Pointer </div>
             <div class='dialogLastMessage'> <%= text %> куда прешь! </div>
@@ -2013,6 +2016,9 @@ exports.getBundleURL = getBundleURLCached;
 exports.getBaseURL = getBaseURL;
 exports.getOrigin = getOrigin;
 
-},{}]},["4NM2i","gWMoH"], "gWMoH", "parcelRequireae13")
+},{}],"cJM9J":[function(require,module,exports) {
+module.exports = require('./helpers/bundle-url').getBundleURL('8GF3A') + "2.d774a1e6.png" + "?" + Date.now();
+
+},{"./helpers/bundle-url":"chiK4"}]},["4NM2i","gWMoH"], "gWMoH", "parcelRequireae13")
 
 //# sourceMappingURL=index.556c0ea0.js.map

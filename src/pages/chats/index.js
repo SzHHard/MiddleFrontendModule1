@@ -1,10 +1,12 @@
 import { chats } from "./chats.tmpl.js";
 import ejs from 'ejs';
-import avatar from '../../../static/avatars/szh.jpg'
+import avatar1 from '../../../static/avatars/szh.jpg'
+import avatar2 from '../../../static/avatars/2.png'
 
 let data = {
     text: 'леее',
-    avatar: avatar
+    avatar1,
+    avatar2
 }
 
 let template = ejs.render(chats, data);

@@ -1,8 +1,22 @@
 
 @import './src/pages/chats/chatsStyles.scss';
-
+@import './src/pages/NotFound404/404screenStyles.scss';
 $primary: aqua;
 
+
+body{
+    background-color: #FAEDFC;
+    height: 100%;
+    margin: 0;
+}
+.root{
+ //  display: grid;
+//    grid-template-areas:
+//     'header header header'
+//     '. . .';
+    display: flex;
+    flex-direction: column;
+}
 .SummDiv{
     background-color: $primary;
 }
