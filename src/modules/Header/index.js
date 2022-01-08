@@ -12,5 +12,3 @@ let template = ejs.render(headerTemplate, data);
 const elem = document.querySelector('#header');
 
 elem.innerHTML = template;  //потом, возможно, поменять innerHTML на другие слова
-
-console.log(template)

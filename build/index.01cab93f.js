@@ -462,17 +462,20 @@ function hmrAcceptRun(bundle, id) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 var _ejs = require("ejs");
 var _ejsDefault = parcelHelpers.interopDefault(_ejs);
-var _loginTemplate = require("./login.template");
+var _loginTmplJs = require("./login.tmpl.js");
 var _registerRedirectPng = require("../../../../static/devImages/registerRedirect.png");
 var _registerRedirectPngDefault = parcelHelpers.interopDefault(_registerRedirectPng);
 let object = {
     registerRedirectImg: _registerRedirectPngDefault.default
 };
-let loginPageTemplate = _ejsDefault.default.render(_loginTemplate.loginPage, object);
-let elem = document.querySelector('#mainContent');
-elem.innerHTML = loginPageTemplate;
+let loginPageTemplate = _ejsDefault.default.render(_loginTmplJs.loginPage, object);
+const elem = document.querySelector('#mainContent');
+if (window.location.pathname === '/login') elem.innerHTML = loginPageTemplate;
 
-},{"ejs":"doTCF","./login.template":"iYJRX","@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV","../../../../static/devImages/registerRedirect.png":"5Qvpq"}],"iYJRX":[function(require,module,exports) {
+},{"ejs":"doTCF","@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV","../../../../static/devImages/registerRedirect.png":"5Qvpq","./login.tmpl.js":"19Czl"}],"5Qvpq":[function(require,module,exports) {
+module.exports = require('./helpers/bundle-url').getBundleURL('9VAEq') + "registerRedirect.20968526.png" + "?" + Date.now();
+
+},{"./helpers/bundle-url":"chiK4"}],"19Czl":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "loginPage", ()=>loginPage
@@ -485,7 +488,7 @@ let loginPage = /*html*/ `
         <div class='formContainer'>
             <form>
                  <div class='inputField'>
-                    <label for='login'>Email:</label>
+                    <label for='login'>Login:</label>
                     <input class='textInput' type='text' id='login' name='login'/>
                 </div>
                 <div class='inputField'>
@@ -506,9 +509,6 @@ let loginPage = /*html*/ `
     </div>
 `;
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV"}],"5Qvpq":[function(require,module,exports) {
-module.exports = require('./helpers/bundle-url').getBundleURL('9VAEq') + "registerRedirect.20968526.png" + "?" + Date.now();
-
-},{"./helpers/bundle-url":"chiK4"}]},["64KJ3","cX3up"], "cX3up", "parcelRequireae13")
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV"}]},["64KJ3","cX3up"], "cX3up", "parcelRequireae13")
 
 //# sourceMappingURL=index.01cab93f.js.map

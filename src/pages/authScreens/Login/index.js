@@ -1,5 +1,5 @@
 import ejs from 'ejs';
-import { loginPage } from './login.template';
+import { loginPage } from './login.tmpl.js';
 import registerRedirectImg from '../../../../static/devImages/registerRedirect.png'
 
 let object = {
@@ -8,6 +8,9 @@ let object = {
 
 let loginPageTemplate = ejs.render(loginPage, object);
 
-let elem = document.querySelector('#mainContent');
+const elem = document.querySelector('#mainContent');
 
-elem.innerHTML = loginPageTemplate;
+if(window.location.pathname === '/login'){  
+    elem.innerHTML = loginPageTemplate;
+}
+

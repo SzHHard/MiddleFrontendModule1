@@ -1,3 +1,111 @@
+.loginContainer {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  width: 600px;
+  height: 440px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 150px;
+  border: 1px solid #000000;
+  box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 15px;
+  font-family: Montserrat;
+}
+.loginContainer .registerButtonContainer {
+  display: flex;
+  justify-content: end;
+}
+.loginContainer .registerButtonContainer button {
+  cursor: pointer;
+  background: #bcf7ff;
+  border-radius: 20px;
+  border: none;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  margin: 15px;
+  height: 40px;
+  width: 210px;
+  font-family: Rasa;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.loginContainer .registerButtonContainer img {
+  width: 25px;
+  height: 25px;
+  margin-left: 5px;
+}
+.loginContainer .formContainer {
+  display: flex;
+  justify-content: center;
+}
+.loginContainer .formContainer .submitContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+.loginContainer .formContainer button {
+  cursor: pointer;
+  justify-self: center;
+  width: 175px;
+  height: 50px;
+  border: none;
+  background: linear-gradient(100.67deg, rgba(188, 247, 255, 0.82) 20.88%, rgba(54, 213, 235, 0.62) 74.52%);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+}
+.loginContainer .formContainer .checkboxContainer {
+  display: flex;
+  margin-top: 20px;
+  border-bottom: 1px solid black;
+  margin-bottom: 20px;
+  height: 45px;
+  align-content: center;
+}
+.loginContainer .formContainer .checkboxContainer label {
+  align-self: center;
+}
+.loginContainer .formContainer .checkboxContainer input {
+  margin-right: 10px;
+  border: 1px solid #000000;
+  border-radius: 5px;
+  width: 22px;
+  height: 22px;
+  align-self: center;
+}
+.loginContainer .formContainer .inputField {
+  position: relative;
+  margin-top: 30px;
+}
+.loginContainer .formContainer .inputField label {
+  position: absolute;
+  top: -13px;
+  left: 23px;
+  padding: 2px;
+  z-index: 1;
+}
+.loginContainer .formContainer .inputField label:after {
+  content: " ";
+  background-color: #fff;
+  width: 100%;
+  height: 13px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+}
+.loginContainer .formContainer .inputField .textInput {
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 15px;
+  width: 499px;
+  height: 58px;
+}
+
 .chatsBlock {
   margin: 0 auto;
   border: 2px solid orange;
@@ -181,114 +289,6 @@
   align-self: center;
 }
 
-.loginContainer {
-  display: flex;
-  flex-direction: column;
-  background-color: white;
-  width: 600px;
-  height: 440px;
-  margin-right: auto;
-  margin-left: auto;
-  margin-top: 150px;
-  border: 1px solid #000000;
-  box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 15px;
-  font-family: Montserrat;
-}
-.loginContainer .registerButtonContainer {
-  display: flex;
-  justify-content: end;
-}
-.loginContainer .registerButtonContainer button {
-  cursor: pointer;
-  background: #bcf7ff;
-  border-radius: 20px;
-  border: none;
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-  margin: 15px;
-  height: 40px;
-  width: 210px;
-  font-family: Rasa;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 18px;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-}
-.loginContainer .registerButtonContainer img {
-  width: 25px;
-  height: 25px;
-  margin-left: 5px;
-}
-.loginContainer .formContainer {
-  display: flex;
-  justify-content: center;
-}
-.loginContainer .formContainer .submitContainer {
-  display: flex;
-  justify-content: center;
-  margin-top: 30px;
-}
-.loginContainer .formContainer button {
-  cursor: pointer;
-  justify-self: center;
-  width: 175px;
-  height: 50px;
-  border: none;
-  background: linear-gradient(100.67deg, rgba(188, 247, 255, 0.82) 20.88%, rgba(54, 213, 235, 0.62) 74.52%);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 20px;
-}
-.loginContainer .formContainer .checkboxContainer {
-  display: flex;
-  margin-top: 20px;
-  border-bottom: 1px solid black;
-  margin-bottom: 20px;
-  height: 45px;
-  align-content: center;
-}
-.loginContainer .formContainer .checkboxContainer label {
-  align-self: center;
-}
-.loginContainer .formContainer .checkboxContainer input {
-  margin-right: 10px;
-  border: 1px solid #000000;
-  border-radius: 5px;
-  width: 22px;
-  height: 22px;
-  align-self: center;
-}
-.loginContainer .formContainer .inputField {
-  position: relative;
-  margin-top: 30px;
-}
-.loginContainer .formContainer .inputField label {
-  position: absolute;
-  top: -13px;
-  left: 23px;
-  padding: 2px;
-  z-index: 1;
-}
-.loginContainer .formContainer .inputField label:after {
-  content: " ";
-  background-color: #fff;
-  width: 100%;
-  height: 13px;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  z-index: -1;
-}
-.loginContainer .formContainer .inputField .textInput {
-  border: 1px solid #000000;
-  box-sizing: border-box;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 15px;
-  width: 499px;
-  height: 58px;
-}
-
 body {
   background-color: #FAEDFC;
   height: 100%;
@@ -298,9 +298,5 @@ body {
 .root {
   display: flex;
   flex-direction: column;
-}
-
-.SummDiv {
-  background-color: aqua;
 }
 /*# sourceMappingURL=index.007189ed.css.map */

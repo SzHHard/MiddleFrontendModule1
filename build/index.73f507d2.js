@@ -471,7 +471,6 @@ let data = {
 let template = _ejsDefault.default.render(_headerTemplate.headerTemplate, data);
 const elem = document.querySelector('#header');
 elem.innerHTML = template; //потом, возможно, поменять innerHTML на другие слова
-console.log(template);
 
 },{"./header.template":"47JZZ","ejs":"doTCF","../../../static/avatars/kindred.jpg":"btvEQ","@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV"}],"47JZZ":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");

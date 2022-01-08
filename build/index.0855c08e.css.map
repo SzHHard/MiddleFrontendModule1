@@ -1,1 +1,0 @@
-{"mappings":"AAEA;EACI,kBAHM","sources":["stylesTest.scss"],"sourcesContent":["$primary: aqua;\n\n.SummDiv{\n    background-color: $primary;\n}"],"names":[],"version":3,"file":"index.0855c08e.css.map","sourceRoot":"/__parcel_source_root/"}

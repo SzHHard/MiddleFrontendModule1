@@ -13,4 +13,6 @@ let template = ejs.render(chats, data);
 
 const elem = document.querySelector('#mainContent');
 
-elem.innerHTML = template;  //потом, возможно, поменять innerHTML на другие слова
+if(window.location.pathname === '/chats') {
+    elem.innerHTML = template;  //потом, возможно, поменять innerHTML на другие слова
+}

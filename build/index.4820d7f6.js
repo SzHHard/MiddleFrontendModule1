@@ -467,7 +467,14 @@ let object = {
 };
 let page404 = _ejsDefault.default.render(_notFoundScreenTmpl.screen404, object);
 let root = document.querySelector('#root');
-if (window.location.pathname !== '/' && window.location.pathname !== '/bug') root.innerHTML = page404;
+let exist = [
+    '/',
+    '/login',
+    '/bug',
+    '/chats',
+    '/registration'
+];
+if (exist.includes(!window.location.pathname)) root.innerHTML = page404;
 
 },{"ejs":"doTCF","./notFoundScreen.tmpl":"z3eec","@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV"}],"z3eec":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");

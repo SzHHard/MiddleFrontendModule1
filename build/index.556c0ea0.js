@@ -474,7 +474,7 @@ let data = {
 };
 let template = _ejsDefault.default.render(_chatsTmplJs.chats, data);
 const elem = document.querySelector('#mainContent');
-elem.innerHTML = template; //потом, возможно, поменять innerHTML на другие слова
+if (window.location.pathname === '/chats') elem.innerHTML = template; //потом, возможно, поменять innerHTML на другие слова
 
 },{"./chats.tmpl.js":"atDUk","ejs":"doTCF","../../../static/avatars/szh.jpg":"bExHq","../../../static/avatars/2.png":"cJM9J","@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV"}],"atDUk":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
