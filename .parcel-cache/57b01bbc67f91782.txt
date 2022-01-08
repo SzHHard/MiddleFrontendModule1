@@ -1,8 +1,12 @@
-16400
+16404
 52/home/szhhard/MiddleFrontendModule1/static/devImages1641628104278312000 1
 56/home/szhhard/MiddleFrontendModule1/static/avatars/2.png1641354323213000000 0
 50/home/szhhard/MiddleFrontendModule1/static/avatars1641459906525938600 1
 42/home/szhhard/MiddleFrontendModule1/static1641628072157387200 1
+78/home/szhhard/MiddleFrontendModule1/src/pages/userSettings/settingsStyles.scss1641641276083784600 0
+75/home/szhhard/MiddleFrontendModule1/src/pages/userSettings/settings.tmpl.js1641641754418048800 0
+67/home/szhhard/MiddleFrontendModule1/src/pages/userSettings/index.js1641641948424748800 0
+58/home/szhhard/MiddleFrontendModule1/src/pages/userSettings1641641281070239800 1
 94/home/szhhard/MiddleFrontendModule1/src/pages/ErrorScreens/500Screen/serverErrorScreen.tmpl.js1641458280180144200 0
 68/home/szhhard/MiddleFrontendModule1/src/pages/ErrorScreens/404Screen1641458676514262400 1
 79/home/szhhard/MiddleFrontendModule1/src/pages/ErrorScreens/404and500Styles.scss1641458698025000000 0
@@ -12,7 +16,7 @@
 76/home/szhhard/MiddleFrontendModule1/src/pages/authScreens/registerlogin.scss1641640007315575600 0
 72/home/szhhard/MiddleFrontendModule1/src/pages/authScreens/Login/index.js1641637248997474800 0
 63/home/szhhard/MiddleFrontendModule1/src/pages/authScreens/Login1641638232189784900 1
-45/home/szhhard/MiddleFrontendModule1/src/pages1641459189516564600 1
+45/home/szhhard/MiddleFrontendModule1/src/pages1641641171683516600 1
 63/home/szhhard/MiddleFrontendModule1/src/modules/Header/index.js1641636000679291900 0
 54/home/szhhard/MiddleFrontendModule1/src/modules/Header1641459376279629600 1
 47/home/szhhard/MiddleFrontendModule1/src/modules1641459353000252600 1
@@ -11314,7 +11318,7 @@
 65/home/szhhard/MiddleFrontendModule1/node_modules/uncss/src/lib.js1641255603894644200 0
 118/home/szhhard/MiddleFrontendModule1/node_modules/postcss-modules-extract-imports/node_modules/source-map/source-map.js1641255603946513600 0
 80/home/szhhard/MiddleFrontendModule1/node_modules/core-js/modules/es.array.map.js1641255605713696500 0
-46/home/szhhard/MiddleFrontendModule1/index.html1641639748548911100 0
+46/home/szhhard/MiddleFrontendModule1/index.html1641641975772431200 0
 65/home/szhhard/MiddleFrontendModule1/node_modules/abab/lib/atob.js1641255603489853700 0
 106/home/szhhard/MiddleFrontendModule1/node_modules/css-modules-loader-core/node_modules/postcss/lib/input.js1641255604743899800 0
 69/home/szhhard/MiddleFrontendModule1/node_modules/ws/lib/validation.js1641255604354679800 0
