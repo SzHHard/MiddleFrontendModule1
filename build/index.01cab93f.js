@@ -472,10 +472,7 @@ let loginPageTemplate = _ejsDefault.default.render(_loginTmplJs.loginPage, objec
 const elem = document.querySelector('#mainContent');
 if (window.location.pathname === '/login') elem.innerHTML = loginPageTemplate;
 
-},{"ejs":"doTCF","@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV","../../../../static/devImages/registerRedirect.png":"5Qvpq","./login.tmpl.js":"19Czl"}],"5Qvpq":[function(require,module,exports) {
-module.exports = require('./helpers/bundle-url').getBundleURL('9VAEq') + "registerRedirect.20968526.png" + "?" + Date.now();
-
-},{"./helpers/bundle-url":"chiK4"}],"19Czl":[function(require,module,exports) {
+},{"ejs":"doTCF","./login.tmpl.js":"19Czl","../../../../static/devImages/registerRedirect.png":"5Qvpq","@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV"}],"19Czl":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "loginPage", ()=>loginPage
@@ -509,6 +506,9 @@ let loginPage = /*html*/ `
     </div>
 `;
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV"}]},["64KJ3","cX3up"], "cX3up", "parcelRequireae13")
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV"}],"5Qvpq":[function(require,module,exports) {
+module.exports = require('./helpers/bundle-url').getBundleURL('9VAEq') + "registerRedirect.20968526.png" + "?" + Date.now();
+
+},{"./helpers/bundle-url":"chiK4"}]},["64KJ3","cX3up"], "cX3up", "parcelRequireae13")
 
 //# sourceMappingURL=index.01cab93f.js.map

@@ -9,6 +9,6 @@ let root = document.querySelector('#root');
 
 let exist = ['/', '/login', '/bug', '/chats', '/registration']
 
-if(exist.includes(!window.location.pathname)){  
+if(!exist.includes(window.location.pathname)){  
     root.innerHTML = page404;
 }

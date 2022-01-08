@@ -466,11 +466,11 @@ var _registrationTmpl = require("./registration.tmpl");
 var _registerRedirectPng = require("../../../../static/devImages/registerRedirect.png");
 var _registerRedirectPngDefault = parcelHelpers.interopDefault(_registerRedirectPng);
 let object = {
-    registerLoginRedirectImg: _registerRedirectPngDefault.default
+    registerRedirectImg: _registerRedirectPngDefault.default
 };
 let registrationPageTemplate = _ejsDefault.default.render(_registrationTmpl.registrationPage, object);
 const elem = document.querySelector('#mainContent');
-elem.innerHTML = registrationPageTemplate;
+if (window.location.pathname === '/registration') elem.innerHTML = registrationPageTemplate;
 
 },{"ejs":"doTCF","./registration.tmpl":"iKk70","../../../../static/devImages/registerRedirect.png":"eCPP6","@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV"}],"iKk70":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
@@ -480,7 +480,7 @@ parcelHelpers.export(exports, "registrationPage", ()=>registrationPage
 let registrationPage = /*html*/ `
     <div class='loginContainer'>
         <div class='registerButtonContainer'>
-            <button>Зарегистрироваться <img src=<%= registerRedirectImg %> /> </button> 
+            <button>Войти <img src=<%= registerRedirectImg %> /> </button> 
         </div>
         <div class='formContainer'>
             <form>
@@ -515,7 +515,7 @@ let registrationPage = /*html*/ `
                 </div>
 
                 <div class='submitContainer'>
-                    <button type='submit' >Войти</button>
+                    <button type='submit' >Зарегистрироваться</button>
                 </div>
             </form>
         </div>

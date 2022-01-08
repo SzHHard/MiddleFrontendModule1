@@ -474,7 +474,7 @@ let exist = [
     '/chats',
     '/registration'
 ];
-if (exist.includes(!window.location.pathname)) root.innerHTML = page404;
+if (!exist.includes(window.location.pathname)) root.innerHTML = page404;
 
 },{"ejs":"doTCF","./notFoundScreen.tmpl":"z3eec","@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV"}],"z3eec":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");

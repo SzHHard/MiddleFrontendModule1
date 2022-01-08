@@ -1,13 +1,15 @@
 import ejs from 'ejs';
 import { registrationPage } from './registration.tmpl';
-import registerLoginRedirectImg from '../../../../static/devImages/registerRedirect.png'
+import registerRedirectImg from '../../../../static/devImages/registerRedirect.png'
 
 let object = {
-    registerLoginRedirectImg
+    registerRedirectImg
 }
 
 let registrationPageTemplate = ejs.render(registrationPage, object);
 
 const elem = document.querySelector('#mainContent');
 
-elem.innerHTML = registrationPageTemplate;
+if(window.location.pathname === '/registration'){
+    elem.innerHTML = registrationPageTemplate;
+}
