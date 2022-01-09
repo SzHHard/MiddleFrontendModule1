@@ -14,7 +14,7 @@ const contentContainer = document.querySelector('.modalWindowContent')
 
 contentContainer.innerHTML = modalContentTemplate;
 
-//
+
 const modal = document.querySelector('.modalWindow');
 
 modal.addEventListener('click', closeModal)
@@ -28,7 +28,6 @@ export const openModal = () => {
 }
 
 function closeModal(e)  {
-    //const modal = document.querySelector('.modalWindow');
     e.target.classList.remove('active');
     e.target.firstElementChild.classList.remove('active');
 }

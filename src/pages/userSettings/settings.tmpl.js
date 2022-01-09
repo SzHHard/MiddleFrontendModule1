@@ -27,6 +27,6 @@ export let settings = /*html*/ `
             <div class='field'> <div class='left'> Телефон: </div> <div class='right'> +7 (800) 555 35 35  </div>  </div> 
         </div>
   
-        <div class = 'bottom'> <div class='bottomLeft'> <a href='#'> Изменить данные </a> </div> <div class='bottomRight'> <a href='#'> Изменить пароль </a> </div> </div>
+        <div class = 'bottom'> <div class='bottomLeft'> <a href='/updateInfo'> Изменить данные </a> </div> <div class='bottomRight'> <a href='#'> Изменить пароль </a> </div> </div>
     </div>
 `
