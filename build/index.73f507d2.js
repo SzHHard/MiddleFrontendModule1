@@ -473,7 +473,6 @@ let template = _ejsDefault.default.render(_headerTemplate.headerTemplate, data);
 const elem = document.querySelector('#header');
 elem.innerHTML = template; //потом, возможно, поменять innerHTML на другие слова
 const accountModalImg = document.querySelector('#accountModalImg');
-console.log(accountModalImg);
 accountModalImg.addEventListener('click', _index.openModal);
 
 },{"./header.template":"47JZZ","ejs":"doTCF","../../../static/avatars/kindred.jpg":"btvEQ","@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV","./accountSettings/index":"g48VG"}],"47JZZ":[function(require,module,exports) {
@@ -503,14 +502,20 @@ var _modalTmpl = require("./modal.tmpl");
 var _modalTmpl1 = require("../../modal/modal.tmpl");
 const elem = document.querySelector('#root');
 elem.insertAdjacentHTML('beforeend', _modalTmpl1.modalWindow);
+//console.log('elem.lastElementChild.lastElementChildTEST1', elem.lastElementChild.lastElementChild)
+//console.log(settingsModal)
 elem.lastElementChild.lastElementChild.innerHTML = _modalTmpl.settingsModal;
+//console.log('elem.lastElementChild.lastElementChildTEST2', elem.lastElementChild.lastElementChild)
 const theDiv1 = document.querySelector('.settingsModal');
+//console.log('s0', theDiv)
+//console.log(theDiv.parentElement)
 const contentContainer = theDiv1.closest('.modalWindowContent');
+//console.log('s1', contentContainer)
 contentContainer.innerHTML = _modalTmpl.settingsModal;
+// console.log('s2', contentContainer)
 const modal1 = contentContainer.closest('.modalWindow');
 modal1.addEventListener('click', closeModal);
 function openModal() {
-    console.log('aye');
     const theDiv = document.querySelector('.settingsModal');
     const modal = theDiv.closest('.modalWindow');
     modal.classList.add('active');
@@ -528,7 +533,7 @@ parcelHelpers.export(exports, "settingsModal", ()=>settingsModal
 );
 let settingsModal = /*html*/ `
     <div class='settingsModal'> 
-        <a>Аккаунт</a>
+        <a href='/account'>Аккаунт</a>
         <button>Выйти</button>
     </div>
 `;

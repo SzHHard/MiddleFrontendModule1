@@ -690,6 +690,14 @@
   color: #0400bf;
 }
 
+.settingsModal {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+
 body {
   background-color: #FAEDFC;
   height: 100%;

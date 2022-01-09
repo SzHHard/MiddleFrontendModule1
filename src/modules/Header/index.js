@@ -15,5 +15,4 @@ elem.innerHTML = template;  //потом, возможно, поменять inn
 
 
 const accountModalImg = document.querySelector('#accountModalImg')
-console.log(accountModalImg)
 accountModalImg.addEventListener('click', openModal)

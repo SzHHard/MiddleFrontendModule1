@@ -1,33 +1,36 @@
 import { modalWindow } from "../../../modules/modal/modal.tmpl"; // взяли шаблон
-import { modalContentTemplate} from './content.tmpl';                     //взяли нужный контент для шаблона
+import { modalContentTemplate } from './content.tmpl';                     //взяли нужный контент для шаблона
 import ejs from 'ejs';
 
 
-const data = {
-}
 
 const elem = document.querySelector('#root');
-const modalTemplate = ejs.render(modalWindow, data);        
-elem.insertAdjacentHTML('beforeend', modalTemplate)       // добавили на экран модальное окно
-
-const contentContainer = document.querySelector('.modalWindowContent')
-
-contentContainer.innerHTML = modalContentTemplate;
+elem.insertAdjacentHTML('beforeend', modalWindow)       // добавили на экран модальное окно
 
 
-const modal = document.querySelector('.modalWindow');
+elem.lastElementChild.lastElementChild.innerHTML = modalContentTemplate;
 
+
+const innerDiv = document.querySelector('.changeAvatarModalContent')
+
+const contentContainer = innerDiv.closest('.modalWindowContent')
+
+
+const modal = contentContainer.closest('.modalWindow');
 modal.addEventListener('click', closeModal)
 
 
 
+
+
 export const openModal = () => {
-   const modal = document.querySelector('.modalWindow');
-   modal.classList.add('active');
-   modal.firstElementChild.classList.add('active');
+    const theDiv = document.querySelector('.changeAvatarModalContent')
+    const modal = theDiv.closest('.modalWindow');
+    modal.classList.add('active');
+    modal.firstElementChild.classList.add('active');
 }
 
-function closeModal(e)  {
+function closeModal(e) {
     e.target.classList.remove('active');
     e.target.firstElementChild.classList.remove('active');
 }

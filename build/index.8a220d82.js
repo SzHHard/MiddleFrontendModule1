@@ -528,18 +528,17 @@ var _modalTmpl = require("../../../modules/modal/modal.tmpl"); // взяли ш�
 var _contentTmpl = require("./content.tmpl"); //взяли нужный контент для шаблона
 var _ejs = require("ejs");
 var _ejsDefault = parcelHelpers.interopDefault(_ejs);
-const data = {
-};
 const elem = document.querySelector('#root');
-const modalTemplate = _ejsDefault.default.render(_modalTmpl.modalWindow, data);
-elem.insertAdjacentHTML('beforeend', modalTemplate) // добавили на экран модальное окно
+elem.insertAdjacentHTML('beforeend', _modalTmpl.modalWindow) // добавили на экран модальное окно
 ;
-const contentContainer = document.querySelector('.modalWindowContent');
-contentContainer.innerHTML = _contentTmpl.modalContentTemplate;
-const modal1 = document.querySelector('.modalWindow');
+elem.lastElementChild.lastElementChild.innerHTML = _contentTmpl.modalContentTemplate;
+const innerDiv = document.querySelector('.changeAvatarModalContent');
+const contentContainer = innerDiv.closest('.modalWindowContent');
+const modal1 = contentContainer.closest('.modalWindow');
 modal1.addEventListener('click', closeModal);
 const openModal = ()=>{
-    const modal = document.querySelector('.modalWindow');
+    const theDiv = document.querySelector('.changeAvatarModalContent');
+    const modal = theDiv.closest('.modalWindow');
     modal.classList.add('active');
     modal.firstElementChild.classList.add('active');
 };

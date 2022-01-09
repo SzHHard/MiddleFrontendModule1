@@ -7,19 +7,25 @@ const elem = document.querySelector('#root');
 
 elem.insertAdjacentHTML('beforeend', modalWindow)       
 
+//console.log('elem.lastElementChild.lastElementChildTEST1', elem.lastElementChild.lastElementChild)
+//console.log(settingsModal)
+
 elem.lastElementChild.lastElementChild.innerHTML = settingsModal;
+
+//console.log('elem.lastElementChild.lastElementChildTEST2', elem.lastElementChild.lastElementChild)
+
 const theDiv = document.querySelector('.settingsModal')
-
-
+//console.log('s0', theDiv)
+//console.log(theDiv.parentElement)
 const contentContainer = theDiv.closest('.modalWindowContent')
+//console.log('s1', contentContainer)
 contentContainer.innerHTML = settingsModal;
-
+// console.log('s2', contentContainer)
 const modal = contentContainer.closest('.modalWindow');
 modal.addEventListener('click', closeModal)
 
 
 export function openModal() {                             
-    console.log('aye')
     const theDiv = document.querySelector('.settingsModal')
     const modal = theDiv.closest('.modalWindow');
     modal.classList.add('active');
