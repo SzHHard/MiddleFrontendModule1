@@ -368,6 +368,7 @@
   font-style: normal;
   font-weight: 600;
   text-align: center;
+  pointer-events: none;
 }
 .settingsContainer .fields {
   margin-top: 25px;
@@ -430,6 +431,54 @@
   -moz-text-shadow: 0px 1px 0 #a680a4, 0px -1px 0 #a680a4, 1px 0px 0 #a680a4, -1px 0px 0 #a680a4, 1px 1px 0 #a680a4, 1px -1px 0 #a680a4, -1px 1px 0 #a680a4, -1px -1px 0 #a680a4;
   font-size: 24px;
   color: #0400bf;
+}
+
+.modalWindow {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  /* черный с прозрачностью 0.4 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.5s;
+}
+
+.modalWindowContent {
+  padding: 20px;
+  background-color: white;
+  border-radius: 12px;
+  transform: scale(0.5);
+  transition: 0.4s all;
+  min-width: 200px;
+  min-height: 180px;
+}
+
+.modalWindow.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.modalWindowContent.active {
+  transform: scale(1);
+}
+
+.changeAvatarModalContent {
+  font-family: Inter;
+  font-size: 48px;
+  height: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.changeAvatarModalContent .file {
+  font-size: 30px;
 }
 
 body {

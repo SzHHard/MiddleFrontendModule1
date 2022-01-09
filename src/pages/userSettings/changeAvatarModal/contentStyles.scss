@@ -1,0 +1,13 @@
+.changeAvatarModalContent{
+    font-family: Inter;
+    font-size: 48px;
+    height: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    .file{
+        font-size: 30px;
+    }
+}

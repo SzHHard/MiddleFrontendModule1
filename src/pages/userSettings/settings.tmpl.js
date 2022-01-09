@@ -9,7 +9,7 @@ export let settings = /*html*/ `
         <div class='avatarAndNickname'>
 
         <div class='balancerLeft'>
-           <div class='imgWrapper'> <img src=<%= userAvatar %> > </div>
+           <div class='imgWrapper'> <img  id = 'changeAvatar' src=<%= userAvatar %> > </div>
             <p> <%= username %> </p>
         </div>
 

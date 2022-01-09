@@ -465,6 +465,7 @@ var _ejsDefault = parcelHelpers.interopDefault(_ejs);
 var _settingsTmpl = require("./settings.tmpl");
 var _kindredJpg = require("../../../static/avatars/kindred.jpg");
 var _kindredJpgDefault = parcelHelpers.interopDefault(_kindredJpg);
+var _handleModal = require("./changeAvatarModal/handleModal");
 let object = {
     userAvatar: _kindredJpgDefault.default,
     username: 'IvanChick.clueyou'
@@ -472,8 +473,10 @@ let object = {
 let settingsTemplate = _ejsDefault.default.render(_settingsTmpl.settings, object);
 const elem = document.querySelector('#mainContent');
 elem.innerHTML = settingsTemplate;
+const img = document.querySelector('#changeAvatar');
+img.addEventListener('click', _handleModal.openModal);
 
-},{"ejs":"doTCF","./settings.tmpl":"9zCxS","@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV","../../../static/avatars/kindred.jpg":"4Ve3O"}],"9zCxS":[function(require,module,exports) {
+},{"ejs":"doTCF","./settings.tmpl":"9zCxS","@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV","../../../static/avatars/kindred.jpg":"4Ve3O","./changeAvatarModal/handleModal":"5ZBIr"}],"9zCxS":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "settings", ()=>settings
@@ -487,7 +490,7 @@ let settings = /*html*/ `
         <div class='avatarAndNickname'>
 
         <div class='balancerLeft'>
-           <div class='imgWrapper'> <img src=<%= userAvatar %> > </div>
+           <div class='imgWrapper'> <img  id = 'changeAvatar' src=<%= userAvatar %> > </div>
             <p> <%= username %> </p>
         </div>
 
@@ -512,6 +515,72 @@ let settings = /*html*/ `
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV"}],"4Ve3O":[function(require,module,exports) {
 module.exports = require('./helpers/bundle-url').getBundleURL('7C0vQ') + "kindred.00e42966.jpg" + "?" + Date.now();
 
-},{"./helpers/bundle-url":"chiK4"}]},["3Ocly","cl2Ir"], "cl2Ir", "parcelRequireae13")
+},{"./helpers/bundle-url":"chiK4"}],"5ZBIr":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "openModal", ()=>openModal
+);
+parcelHelpers.export(exports, "closeModal", ()=>closeModal
+);
+var _modalTmpl = require("../../../modules/modal/modal.tmpl"); // взяли шаблон
+var _contentTmpl = require("./content.tmpl"); //взяли нужный контент для шаблона
+var _ejs = require("ejs");
+var _ejsDefault = parcelHelpers.interopDefault(_ejs);
+console.log(_contentTmpl.modalContentTemplate);
+const data = {
+};
+const elem = document.querySelector('#root');
+const modalTemplate = _ejsDefault.default.render(_modalTmpl.modalWindow, data);
+// elem.insertAdjacentHTML('beforeend', modalTemplate)       // добавили на экран модальное окно
+// const contentContainer = document.querySelector('.modalWindowContent')
+// console.log(modalTemplate);
+// contentContainer.innerHTML = modalContentTemplate;
+// раскомментировать верх и удалить то, что между этих строк после разработки окна
+elem.innerHTML = modalTemplate;
+const contentContainer = document.querySelector('.modalWindowContent');
+console.log(modalTemplate);
+contentContainer.innerHTML = _contentTmpl.modalContentTemplate;
+const openModal = ()=>{
+    const modal = document.querySelector('.modalWindow');
+    modal.classList.add('active');
+};
+const closeModal = ()=>{
+    const modal = document.querySelector('.modalWindow');
+    modal.classList.remove('active');
+};
+
+},{"../../../modules/modal/modal.tmpl":"5ogG9","ejs":"doTCF","@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV","./content.tmpl":"l5RV3"}],"5ogG9":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "modalWindow", ()=>modalWindow
+);
+let modalWindow = /*html*/ `
+    <div class='modalWindow active'>
+        <div class='modalWindowContent'>
+           
+        </div>
+    </div>
+`;
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV"}],"l5RV3":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "modalContentTemplate", ()=>modalContentTemplate
+);
+var _ejs = require("ejs");
+var _ejsDefault = parcelHelpers.interopDefault(_ejs);
+let modalContent = /*html*/ `
+    <div class='changeAvatarModalContent'>
+        <h4><%= status %></h4>
+        <div class='file'>Выбрать файл на компьютере</div>
+        <button>Поменять</button>
+    </div>
+`;
+let data = {
+    status: 'Загрузите файл'
+};
+let modalContentTemplate = _ejsDefault.default.render(modalContent, data);
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV","ejs":"doTCF"}]},["3Ocly","cl2Ir"], "cl2Ir", "parcelRequireae13")
 
 //# sourceMappingURL=index.8a220d82.js.map
