@@ -286,9 +286,10 @@
   display: flex;
 }
 .header .imgContainer img {
-  height: 50px;
-  width: 50px;
-  border-radius: 50px;
+  height: 55px;
+  width: 55px;
+  cursor: pointer;
+  border-radius: 500px;
   align-self: center;
 }
 

@@ -463,22 +463,16 @@ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 var _ejs = require("ejs");
 var _ejsDefault = parcelHelpers.interopDefault(_ejs);
 var _changeDataTmpl = require("./changeData.tmpl");
-var _kindredJpg = require("../../../../static/avatars/kindred.jpg");
-var _kindredJpgDefault = parcelHelpers.interopDefault(_kindredJpg);
-var _handleModal = require("../changeAvatarModal/handleModal");
-let object = {
-    userAvatar: _kindredJpgDefault.default,
-    username: 'IvanChick.clueyou'
-};
-let changeDataTemplate = _ejsDefault.default.render(_changeDataTmpl.changeData, object);
+var _dataObj = require("../userData/dataObj");
+var _addModalToImg = require("../utils/addModalToImg");
+let changeDataTemplate = _ejsDefault.default.render(_changeDataTmpl.changeData, _dataObj.userData);
 const elem = document.querySelector('#mainContent');
 if (window.location.pathname === '/updateInfo') {
     elem.innerHTML = changeDataTemplate;
-    const img = document.querySelector('#changeAvatar');
-    img.addEventListener('click', _handleModal.openModal);
+    _addModalToImg.addModalToImg();
 }
 
-},{"ejs":"doTCF","./changeData.tmpl":"VZaJO","../../../../static/avatars/kindred.jpg":"02mdo","@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV","../changeAvatarModal/handleModal":"5ZBIr"}],"VZaJO":[function(require,module,exports) {
+},{"ejs":"doTCF","./changeData.tmpl":"VZaJO","@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV","../userData/dataObj":"coIaj","../utils/addModalToImg":"5CczO"}],"VZaJO":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "changeData", ()=>changeData
@@ -507,7 +501,7 @@ let changeData = /*html*/ `
             <div class='left'> Почта: </div> 
             <div class='right'> 
                 <div class='inputField'>
-                    <input class='textInput' type='text' id='email' name='email'/>
+                    <input class='textInput' type='text' id='email' name='email' value= <%= userEmail %> />
                 </div> 
             </div>  
         </div>
@@ -516,7 +510,7 @@ let changeData = /*html*/ `
             <div class='left'> Логин: </div> 
             <div class='right'> 
                 <div class='inputField'>
-                    <input class='textInput' type='text' id='login' name='login'/>
+                    <input class='textInput' type='text' id='login' name='login' value= <%= userLogin %> />
                 </div> 
             </div>  
         </div>
@@ -525,7 +519,7 @@ let changeData = /*html*/ `
             <div class='left'> Имя: </div> 
             <div class='right'> 
                 <div class='inputField'>
-                <input class='textInput' type='text' id='first_name' name='first_name'/>
+                <input class='textInput' type='text' id='first_name' name='first_name' value= <%= userFirstName %> />
                 </div> 
             </div>  
         </div>
@@ -534,7 +528,7 @@ let changeData = /*html*/ `
             <div class='left'> Фамилия: </div> 
             <div class='right'> 
                 <div class='inputField'>
-                    <input class='textInput' type='text' id='second_name' name='second_name'/>
+                    <input class='textInput' type='text' id='second_name' name='second_name' value= <%= userSecondName %> />
                 </div> 
             </div>  
         </div>
@@ -544,7 +538,7 @@ let changeData = /*html*/ `
             <div class='left'> Телефон: </div> 
             <div class='right'> 
                 <div class='inputField'>
-                    <input class='textInput' type='text' id='phone' name='phone'/>
+                    <input class='textInput' type='text' id='phone' name='phone' value= <%= userPhoneNumber %> />
                 </div> 
             </div>  
         </div>
@@ -552,13 +546,10 @@ let changeData = /*html*/ `
     </div>
 
     <div class='submit'> <button>Изменить значения</button> </div>
-    <div class = 'bottom'> <div class='bottomLeft'> <a href='/'> К профилю </a> </div> <div class='bottomRight'> <a href='#'> Изменить пароль </a> </div> </div>
+    <div class = 'bottom'> <div class='bottomLeft'> <a href='/account'> К профилю </a> </div> <div class='bottomRight'> <a href='/updatePassword'> Изменить пароль </a> </div> </div>
 </div>
 `;
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV"}],"02mdo":[function(require,module,exports) {
-module.exports = require('./helpers/bundle-url').getBundleURL('jwZyz') + "kindred.00e42966.jpg" + "?" + Date.now();
-
-},{"./helpers/bundle-url":"chiK4"}]},["hHIcN","hslNs"], "hslNs", "parcelRequireae13")
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV"}]},["hHIcN","hslNs"], "hslNs", "parcelRequireae13")
 
 //# sourceMappingURL=index.156b077c.js.map

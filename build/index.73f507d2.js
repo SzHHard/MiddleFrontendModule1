@@ -465,14 +465,18 @@ var _ejs = require("ejs");
 var _ejsDefault = parcelHelpers.interopDefault(_ejs);
 var _kindredJpg = require("../../../static/avatars/kindred.jpg");
 var _kindredJpgDefault = parcelHelpers.interopDefault(_kindredJpg);
+var _index = require("./accountSettings/index");
 let data = {
     userAvatar: _kindredJpgDefault.default
 };
 let template = _ejsDefault.default.render(_headerTemplate.headerTemplate, data);
 const elem = document.querySelector('#header');
 elem.innerHTML = template; //потом, возможно, поменять innerHTML на другие слова
+const accountModalImg = document.querySelector('#accountModalImg');
+console.log(accountModalImg);
+accountModalImg.addEventListener('click', _index.openModal);
 
-},{"./header.template":"47JZZ","ejs":"doTCF","../../../static/avatars/kindred.jpg":"btvEQ","@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV"}],"47JZZ":[function(require,module,exports) {
+},{"./header.template":"47JZZ","ejs":"doTCF","../../../static/avatars/kindred.jpg":"btvEQ","@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV","./accountSettings/index":"g48VG"}],"47JZZ":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "headerTemplate", ()=>headerTemplate
@@ -481,7 +485,7 @@ let headerTemplate = /* html */ `
     <div class='header'>
         <h2>BestMESSanger</h2>
         <div class="imgContainer">
-            <img src= <%= userAvatar %> alt="avatar"/>
+            <img id='accountModalImg' src= <%= userAvatar %> alt="avatar"/>
         </div>
     </div>
 `;
@@ -489,6 +493,59 @@ let headerTemplate = /* html */ `
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV"}],"btvEQ":[function(require,module,exports) {
 module.exports = require('./helpers/bundle-url').getBundleURL('Vfjsz') + "kindred.00e42966.jpg" + "?" + Date.now();
 
-},{"./helpers/bundle-url":"chiK4"}]},["agCFV","ahBFr"], "ahBFr", "parcelRequireae13")
+},{"./helpers/bundle-url":"chiK4"}],"g48VG":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "openModal", ()=>openModal
+);
+//import ejs from 'ejs';
+var _modalTmpl = require("./modal.tmpl");
+var _modalTmpl1 = require("../../modal/modal.tmpl");
+const elem = document.querySelector('#root');
+elem.insertAdjacentHTML('beforeend', _modalTmpl1.modalWindow);
+elem.lastElementChild.lastElementChild.innerHTML = _modalTmpl.settingsModal;
+const theDiv1 = document.querySelector('.settingsModal');
+const contentContainer = theDiv1.closest('.modalWindowContent');
+contentContainer.innerHTML = _modalTmpl.settingsModal;
+const modal1 = contentContainer.closest('.modalWindow');
+modal1.addEventListener('click', closeModal);
+function openModal() {
+    console.log('aye');
+    const theDiv = document.querySelector('.settingsModal');
+    const modal = theDiv.closest('.modalWindow');
+    modal.classList.add('active');
+    modal.firstElementChild.classList.add('active');
+}
+function closeModal(e) {
+    e.target.classList.remove('active');
+    e.target.firstElementChild.classList.remove('active');
+}
+
+},{"./modal.tmpl":"67Wck","../../modal/modal.tmpl":"5ogG9","@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV"}],"67Wck":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "settingsModal", ()=>settingsModal
+);
+let settingsModal = /*html*/ `
+    <div class='settingsModal'> 
+        <a>Аккаунт</a>
+        <button>Выйти</button>
+    </div>
+`;
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV"}],"5ogG9":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "modalWindow", ()=>modalWindow
+);
+let modalWindow = /*html*/ `
+    <div class='modalWindow' >
+        <div onclick="event.stopPropagation()" class='modalWindowContent'>
+           
+        </div>
+    </div>
+`;
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV"}]},["agCFV","ahBFr"], "ahBFr", "parcelRequireae13")
 
 //# sourceMappingURL=index.73f507d2.js.map

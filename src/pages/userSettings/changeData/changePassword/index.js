@@ -1,16 +1,11 @@
 import ejs from 'ejs';
 import { changePassword } from './changePassword.tmpl';
-import userAvatar from '../../../../../static/avatars/kindred.jpg';
-import { openModal, closeModal } from '../../changeAvatarModal/handleModal';
+import {userData} from '../../userData/dataObj';
+import {addModalToImg} from '../../utils/addModalToImg';
 
 
 
-let object = {
-    userAvatar,
-    username: 'IvanChick.clueyou',
-}
-
-let changePasswordTemplate = ejs.render(changePassword, object);
+let changePasswordTemplate = ejs.render(changePassword, userData);
 
 const elem = document.querySelector('#mainContent');
 
@@ -18,6 +13,5 @@ const elem = document.querySelector('#mainContent');
 if (window.location.pathname === '/updatePassword') {
     elem.innerHTML = changePasswordTemplate;
 
-    const img = document.querySelector('#changeAvatar');
-    img.addEventListener('click', openModal);
+    addModalToImg();
 }

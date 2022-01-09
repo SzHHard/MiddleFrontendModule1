@@ -49,6 +49,6 @@ export let changePassword = /*html*/ `
     </div>
 
     <div class='submit'> <button>Изменить значение</button> </div>
-    <div class = 'bottom'> <div class='bottomLeft'> <a href='/'> К профилю </a> </div> <div class='bottomRight'> <a href='#'> Изменить данные </a> </div> </div>
+    <div class = 'bottom'> <div class='bottomLeft'> <a href='/account'> К профилю </a> </div> <div class='bottomRight'> <a href='/updateInfo'> Изменить данные </a> </div> </div>
 </div>
 `

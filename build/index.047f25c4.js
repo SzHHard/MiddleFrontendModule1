@@ -463,22 +463,16 @@ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 var _ejs = require("ejs");
 var _ejsDefault = parcelHelpers.interopDefault(_ejs);
 var _changePasswordTmpl = require("./changePassword.tmpl");
-var _kindredJpg = require("../../../../../static/avatars/kindred.jpg");
-var _kindredJpgDefault = parcelHelpers.interopDefault(_kindredJpg);
-var _handleModal = require("../../changeAvatarModal/handleModal");
-let object = {
-    userAvatar: _kindredJpgDefault.default,
-    username: 'IvanChick.clueyou'
-};
-let changePasswordTemplate = _ejsDefault.default.render(_changePasswordTmpl.changePassword, object);
+var _dataObj = require("../../userData/dataObj");
+var _addModalToImg = require("../../utils/addModalToImg");
+let changePasswordTemplate = _ejsDefault.default.render(_changePasswordTmpl.changePassword, _dataObj.userData);
 const elem = document.querySelector('#mainContent');
 if (window.location.pathname === '/updatePassword') {
     elem.innerHTML = changePasswordTemplate;
-    const img = document.querySelector('#changeAvatar');
-    img.addEventListener('click', _handleModal.openModal);
+    _addModalToImg.addModalToImg();
 }
 
-},{"ejs":"doTCF","./changePassword.tmpl":"6CPFb","@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV","../../../../../static/avatars/kindred.jpg":"9eR68","../../changeAvatarModal/handleModal":"5ZBIr"}],"6CPFb":[function(require,module,exports) {
+},{"ejs":"doTCF","./changePassword.tmpl":"6CPFb","@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV","../../userData/dataObj":"coIaj","../../utils/addModalToImg":"5CczO"}],"6CPFb":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "changePassword", ()=>changePassword
@@ -534,13 +528,10 @@ let changePassword = /*html*/ `
     </div>
 
     <div class='submit'> <button>Изменить значение</button> </div>
-    <div class = 'bottom'> <div class='bottomLeft'> <a href='/'> К профилю </a> </div> <div class='bottomRight'> <a href='#'> Изменить данные </a> </div> </div>
+    <div class = 'bottom'> <div class='bottomLeft'> <a href='/account'> К профилю </a> </div> <div class='bottomRight'> <a href='/updateInfo'> Изменить данные </a> </div> </div>
 </div>
 `;
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV"}],"9eR68":[function(require,module,exports) {
-module.exports = require('./helpers/bundle-url').getBundleURL('gkWck') + "kindred.00e42966.jpg" + "?" + Date.now();
-
-},{"./helpers/bundle-url":"chiK4"}]},["71LWU","4tclF"], "4tclF", "parcelRequireae13")
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV"}]},["71LWU","4tclF"], "4tclF", "parcelRequireae13")
 
 //# sourceMappingURL=index.047f25c4.js.map

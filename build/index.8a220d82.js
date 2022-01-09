@@ -463,20 +463,16 @@ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 var _ejs = require("ejs");
 var _ejsDefault = parcelHelpers.interopDefault(_ejs);
 var _settingsTmpl = require("./settings.tmpl");
-var _kindredJpg = require("../../../static/avatars/kindred.jpg");
-var _kindredJpgDefault = parcelHelpers.interopDefault(_kindredJpg);
-var _handleModal = require("./changeAvatarModal/handleModal");
-let object = {
-    userAvatar: _kindredJpgDefault.default,
-    username: 'IvanChick.clueyou'
-};
-let settingsTemplate = _ejsDefault.default.render(_settingsTmpl.settings, object);
+var _dataObj = require("./userData/dataObj");
+var _addModalToImg = require("./utils/addModalToImg");
+let settingsTemplate = _ejsDefault.default.render(_settingsTmpl.settings, _dataObj.userData);
 const elem = document.querySelector('#mainContent');
-elem.innerHTML = settingsTemplate;
-const img = document.querySelector('#changeAvatar');
-img.addEventListener('click', _handleModal.openModal);
+if (document.location.pathname === '/account') {
+    elem.innerHTML = settingsTemplate;
+    _addModalToImg.addModalToImg();
+}
 
-},{"ejs":"doTCF","./settings.tmpl":"9zCxS","@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV","../../../static/avatars/kindred.jpg":"4Ve3O","./changeAvatarModal/handleModal":"5ZBIr"}],"9zCxS":[function(require,module,exports) {
+},{"ejs":"doTCF","./settings.tmpl":"9zCxS","@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV","./utils/addModalToImg":"5CczO","./userData/dataObj":"coIaj"}],"9zCxS":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "settings", ()=>settings
@@ -501,21 +497,29 @@ let settings = /*html*/ `
         </div>
         
         <div class='fields'>
-            <div class='field'> <div class='left'> Почта: </div> <div class='right'> pochta@yandex.ru </div>  </div>
-            <div class='field'>  <div class='left'> Логин: </div> <div class='right'> ivanIvanov </div>  </div>
-            <div class='field'>  <div class='left'> Имя: </div> <div class='right'> Иван </div>  </div>
-            <div class='field'><div class='left'> Фамилия: </div> <div class='right'> Иванов </div>  </div> 
-            <div class='field'> <div class='left'> Телефон: </div> <div class='right'> +7 (800) 555 35 35  </div>  </div> 
+            <div class='field'> <div class='left'> Почта: </div> <div class='right'> <%= userEmail %> </div>  </div>
+            <div class='field'>  <div class='left'> Логин: </div> <div class='right'> <%= userLogin %> </div>  </div>
+            <div class='field'>  <div class='left'> Имя: </div> <div class='right'> <%= userFirstName %> </div>  </div>
+            <div class='field'><div class='left'> Фамилия: </div> <div class='right'> <%= userSecondName %> </div>  </div> 
+            <div class='field'> <div class='left'> Телефон: </div> <div class='right'> <%= userPhoneNumber %>  </div>  </div> 
         </div>
   
-        <div class = 'bottom'> <div class='bottomLeft'> <a href='/updateInfo'> Изменить данные </a> </div> <div class='bottomRight'> <a href='#'> Изменить пароль </a> </div> </div>
+        <div class = 'bottom'> <div class='bottomLeft'> <a href='/updateInfo'> Изменить данные </a> </div> <div class='bottomRight'> <a href='/updatePassword'> Изменить пароль </a> </div> </div>
     </div>
 `;
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV"}],"4Ve3O":[function(require,module,exports) {
-module.exports = require('./helpers/bundle-url').getBundleURL('7C0vQ') + "kindred.00e42966.jpg" + "?" + Date.now();
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV"}],"5CczO":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "addModalToImg", ()=>addModalToImg
+);
+var _handleModal = require("../changeAvatarModal/handleModal");
+const addModalToImg = ()=>{
+    const img = document.querySelector('#changeAvatar');
+    img.addEventListener('click', _handleModal.openModal);
+};
 
-},{"./helpers/bundle-url":"chiK4"}],"5ZBIr":[function(require,module,exports) {
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV","../changeAvatarModal/handleModal":"5ZBIr"}],"5ZBIr":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "openModal", ()=>openModal
@@ -544,20 +548,7 @@ function closeModal(e) {
     e.target.firstElementChild.classList.remove('active');
 }
 
-},{"../../../modules/modal/modal.tmpl":"5ogG9","ejs":"doTCF","@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV","./content.tmpl":"l5RV3"}],"5ogG9":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "modalWindow", ()=>modalWindow
-);
-let modalWindow = /*html*/ `
-    <div class='modalWindow' >
-        <div onclick="event.stopPropagation()" class='modalWindowContent'>
-           
-        </div>
-    </div>
-`;
-
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV"}],"l5RV3":[function(require,module,exports) {
+},{"../../../modules/modal/modal.tmpl":"5ogG9","ejs":"doTCF","@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV","./content.tmpl":"l5RV3"}],"l5RV3":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "modalContentTemplate", ()=>modalContentTemplate
@@ -576,6 +567,26 @@ let data = {
 };
 let modalContentTemplate = _ejsDefault.default.render(modalContent, data);
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV","ejs":"doTCF"}]},["3Ocly","cl2Ir"], "cl2Ir", "parcelRequireae13")
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV","ejs":"doTCF"}],"coIaj":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "userData", ()=>userData
+);
+var _kindredJpg = require("../../../../static/avatars/kindred.jpg");
+var _kindredJpgDefault = parcelHelpers.interopDefault(_kindredJpg);
+let userData = {
+    userAvatar: _kindredJpgDefault.default,
+    username: 'IvanChick.clueyou',
+    userEmail: 'pochta@yandex.ru',
+    userLogin: 'ivanIvanov',
+    userFirstName: 'Иван',
+    userSecondName: 'Иванов',
+    userPhoneNumber: '+7-800-555-35-35'
+};
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV","../../../../static/avatars/kindred.jpg":"4Ve3O"}],"4Ve3O":[function(require,module,exports) {
+module.exports = require('./helpers/bundle-url').getBundleURL('7C0vQ') + "kindred.00e42966.jpg" + "?" + Date.now();
+
+},{"./helpers/bundle-url":"chiK4"}]},["3Ocly","cl2Ir"], "cl2Ir", "parcelRequireae13")
 
 //# sourceMappingURL=index.8a220d82.js.map
