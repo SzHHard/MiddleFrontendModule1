@@ -14,10 +14,12 @@
     pointer-events: none;
     transition: 0.5s;
 
+    cursor: pointer;
     
 }
 
 .modalWindowContent {
+    cursor: default;
     padding: 20px;
     background-color: white;
     
@@ -27,6 +29,7 @@
 
     min-width: 200px;
     min-height: 180px;
+    display: flex;
 }
 
 

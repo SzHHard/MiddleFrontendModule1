@@ -520,34 +520,31 @@ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "openModal", ()=>openModal
 );
-parcelHelpers.export(exports, "closeModal", ()=>closeModal
-);
 var _modalTmpl = require("../../../modules/modal/modal.tmpl"); // взяли шаблон
 var _contentTmpl = require("./content.tmpl"); //взяли нужный контент для шаблона
 var _ejs = require("ejs");
 var _ejsDefault = parcelHelpers.interopDefault(_ejs);
-console.log(_contentTmpl.modalContentTemplate);
 const data = {
 };
 const elem = document.querySelector('#root');
 const modalTemplate = _ejsDefault.default.render(_modalTmpl.modalWindow, data);
-// elem.insertAdjacentHTML('beforeend', modalTemplate)       // добавили на экран модальное окно
-// const contentContainer = document.querySelector('.modalWindowContent')
-// console.log(modalTemplate);
-// contentContainer.innerHTML = modalContentTemplate;
-// раскомментировать верх и удалить то, что между этих строк после разработки окна
-elem.innerHTML = modalTemplate;
+elem.insertAdjacentHTML('beforeend', modalTemplate) // добавили на экран модальное окно
+;
 const contentContainer = document.querySelector('.modalWindowContent');
-console.log(modalTemplate);
 contentContainer.innerHTML = _contentTmpl.modalContentTemplate;
+//
+const modal1 = document.querySelector('.modalWindow');
+modal1.addEventListener('click', closeModal);
 const openModal = ()=>{
     const modal = document.querySelector('.modalWindow');
     modal.classList.add('active');
+    modal.firstElementChild.classList.add('active');
 };
-const closeModal = ()=>{
-    const modal = document.querySelector('.modalWindow');
-    modal.classList.remove('active');
-};
+function closeModal(e) {
+    //const modal = document.querySelector('.modalWindow');
+    e.target.classList.remove('active');
+    e.target.firstElementChild.classList.remove('active');
+}
 
 },{"../../../modules/modal/modal.tmpl":"5ogG9","ejs":"doTCF","@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV","./content.tmpl":"l5RV3"}],"5ogG9":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
@@ -555,8 +552,8 @@ parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "modalWindow", ()=>modalWindow
 );
 let modalWindow = /*html*/ `
-    <div class='modalWindow active'>
-        <div class='modalWindowContent'>
+    <div class='modalWindow' >
+        <div onclick="event.stopPropagation()" class='modalWindowContent'>
            
         </div>
     </div>
@@ -571,8 +568,8 @@ var _ejs = require("ejs");
 var _ejsDefault = parcelHelpers.interopDefault(_ejs);
 let modalContent = /*html*/ `
     <div class='changeAvatarModalContent'>
-        <h4><%= status %></h4>
-        <div class='file'>Выбрать файл на компьютере</div>
+        <div> <p><%= status %></p> </div>
+        <div class='file'>Выбрать файл на <br /> компьютере</div>
         <button>Поменять</button>
     </div>
 `;

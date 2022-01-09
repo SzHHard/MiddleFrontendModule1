@@ -447,9 +447,11 @@
   opacity: 0;
   pointer-events: none;
   transition: 0.5s;
+  cursor: pointer;
 }
 
 .modalWindowContent {
+  cursor: default;
   padding: 20px;
   background-color: white;
   border-radius: 12px;
@@ -457,6 +459,7 @@
   transition: 0.4s all;
   min-width: 200px;
   min-height: 180px;
+  display: flex;
 }
 
 .modalWindow.active {
@@ -470,15 +473,40 @@
 
 .changeAvatarModalContent {
   font-family: Inter;
-  font-size: 48px;
-  height: 60px;
+  min-height: 200px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+  width: 280px;
+}
+.changeAvatarModalContent p {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 15px;
+  color: #1e1e1e;
 }
 .changeAvatarModalContent .file {
-  font-size: 30px;
+  cursor: pointer;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  text-align: center;
+  text-decoration-line: underline;
+  color: #3369f3;
+}
+.changeAvatarModalContent button {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13px;
+  text-align: center;
+  color: #ffffff;
+  background-color: #3369f3;
+  width: 250px;
+  height: 36px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
 }
 
 body {

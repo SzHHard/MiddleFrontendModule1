@@ -1,7 +1,7 @@
 let modalContent = /*html*/ `
     <div class='changeAvatarModalContent'>
-        <h4><%= status %></h4>
-        <div class='file'>Выбрать файл на компьютере</div>
+        <div> <p><%= status %></p> </div>
+        <div class='file'>Выбрать файл на <br /> компьютере</div>
         <button>Поменять</button>
     </div>
 `

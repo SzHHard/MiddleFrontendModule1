@@ -16,9 +16,9 @@ const elem = document.querySelector('#mainContent');
 
 
 
-elem.innerHTML = settingsTemplate;
+elem.innerHTML = settingsTemplate;   
 
 const img = document.querySelector('#changeAvatar');
-img.addEventListener('click', openModal);
+img.addEventListener('click', openModal); 
 
 

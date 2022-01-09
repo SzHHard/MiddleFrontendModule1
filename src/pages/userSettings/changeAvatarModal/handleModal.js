@@ -2,39 +2,34 @@ import { modalWindow } from "../../../modules/modal/modal.tmpl"; // взяли �
 import { modalContentTemplate} from './content.tmpl';                     //взяли нужный контент для шаблона
 import ejs from 'ejs';
 
-console.log(modalContentTemplate);
 
 const data = {
 }
 
 const elem = document.querySelector('#root');
 const modalTemplate = ejs.render(modalWindow, data);        
-// elem.insertAdjacentHTML('beforeend', modalTemplate)       // добавили на экран модальное окно
+elem.insertAdjacentHTML('beforeend', modalTemplate)       // добавили на экран модальное окно
 
-// const contentContainer = document.querySelector('.modalWindowContent')
+const contentContainer = document.querySelector('.modalWindowContent')
 
-// console.log(modalTemplate);
-// contentContainer.innerHTML = modalContentTemplate;
+contentContainer.innerHTML = modalContentTemplate;
 
-
-
-// раскомментировать верх и удалить то, что между этих строк после разработки окна
-    elem.innerHTML = modalTemplate;
-    const contentContainer = document.querySelector('.modalWindowContent')
-
-    console.log(modalTemplate);
-    contentContainer.innerHTML = modalContentTemplate;
 //
+const modal = document.querySelector('.modalWindow');
+
+modal.addEventListener('click', closeModal)
 
 
 
 export const openModal = () => {
    const modal = document.querySelector('.modalWindow');
    modal.classList.add('active');
+   modal.firstElementChild.classList.add('active');
 }
 
-export const closeModal = () => {
-    const modal = document.querySelector('.modalWindow');
-    modal.classList.remove('active');
+function closeModal(e)  {
+    //const modal = document.querySelector('.modalWindow');
+    e.target.classList.remove('active');
+    e.target.firstElementChild.classList.remove('active');
 }
 
