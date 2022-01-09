@@ -507,12 +507,8 @@ elem.insertAdjacentHTML('beforeend', _modalTmpl1.modalWindow);
 elem.lastElementChild.lastElementChild.innerHTML = _modalTmpl.settingsModal;
 //console.log('elem.lastElementChild.lastElementChildTEST2', elem.lastElementChild.lastElementChild)
 const theDiv1 = document.querySelector('.settingsModal');
-//console.log('s0', theDiv)
-//console.log(theDiv.parentElement)
 const contentContainer = theDiv1.closest('.modalWindowContent');
-//console.log('s1', contentContainer)
 contentContainer.innerHTML = _modalTmpl.settingsModal;
-// console.log('s2', contentContainer)
 const modal1 = contentContainer.closest('.modalWindow');
 modal1.addEventListener('click', closeModal);
 function openModal() {

@@ -472,7 +472,7 @@ if (window.location.pathname === '/updatePassword') {
     _addModalToImg.addModalToImg();
 }
 
-},{"ejs":"doTCF","./changePassword.tmpl":"6CPFb","@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV","../../userData/dataObj":"coIaj","../../utils/addModalToImg":"5CczO"}],"6CPFb":[function(require,module,exports) {
+},{"ejs":"doTCF","./changePassword.tmpl":"6CPFb","../../userData/dataObj":"coIaj","../../utils/addModalToImg":"5CczO","@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV"}],"6CPFb":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "changePassword", ()=>changePassword

@@ -467,16 +467,22 @@ var _szhJpg = require("../../../static/avatars/szh.jpg");
 var _szhJpgDefault = parcelHelpers.interopDefault(_szhJpg);
 var _2Png = require("../../../static/avatars/2.png");
 var _2PngDefault = parcelHelpers.interopDefault(_2Png);
+var _32PxlensePng = require("../../../static/devImages/32pxlense.png");
+var _32PxlensePngDefault = parcelHelpers.interopDefault(_32PxlensePng);
+var _3DotsJpg = require("../../../static/devImages/3dots.jpg");
+var _3DotsJpgDefault = parcelHelpers.interopDefault(_3DotsJpg);
 let data = {
     text: 'леее',
     avatar1: _szhJpgDefault.default,
-    avatar2: _2PngDefault.default
+    avatar2: _2PngDefault.default,
+    lense: _32PxlensePngDefault.default,
+    more: _3DotsJpgDefault.default
 };
 let template = _ejsDefault.default.render(_chatsTmplJs.chats, data);
 const elem = document.querySelector('#mainContent');
 if (window.location.pathname === '/') elem.innerHTML = template; //потом, возможно, поменять innerHTML на другие слова
 
-},{"./chats.tmpl.js":"atDUk","ejs":"doTCF","../../../static/avatars/szh.jpg":"bExHq","../../../static/avatars/2.png":"cJM9J","@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV"}],"atDUk":[function(require,module,exports) {
+},{"./chats.tmpl.js":"atDUk","ejs":"doTCF","../../../static/avatars/szh.jpg":"bExHq","../../../static/avatars/2.png":"cJM9J","@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV","../../../static/devImages/32pxlense.png":"khiog","../../../static/devImages/3dots.jpg":"gF1ZZ"}],"atDUk":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "chats", ()=>chats
@@ -484,26 +490,43 @@ parcelHelpers.export(exports, "chats", ()=>chats
 let chats = /* html */ `
 <div class='chatsBlock'>
     <div class = 'chatsBlock__searchbarContainer'>
-        <input placeholder="Search" />
+        <div class='left'>    
+            <img class='lense' src= <%= lense %> alt='lense' />
+            <input placeholder="Search" />
+        </div>
+
         <div class='searchbarContainer__createGroupChatButton'>
-            <button> img '+'' </button>
+            <img class='more' src=<%= more %> alt='more'/>
         </div>
     </div>
 
 
     <!-- тут нужно будет сделать цикл с выводом чатов -->
     <div class='chatsBlock__chatPreviewContainer'>
-        <img src= <%= avatar1 %> alt='avatar'>
-        <div class='chatPreview'>
-            <div class='dialogName'> Mr Pointer </div>
-            <div class='dialogLastMessage'> <%= text %> куда прешь </div>
+        <div class='leftSide'>
+            <img src= <%= avatar1 %> alt='avatar'>
+            <div class='chatPreview'>
+                <div class='dialogName'> Mr Pointer </div>
+                <div class='dialogLastMessage'> <%= text %> куда прешь </div>
+            </div>
         </div>
+        <div class='rightSide'>
+            <p>10:14 am</p>
+            <div class='newMessagesCount'><span>1<span></div>
+        </div>
+
     </div>  
     <div class='chatsBlock__chatPreviewContainer'>
-        <img src= <%= avatar2 %> alt='avatar'>
-        <div class='chatPreview'>
-            <div class='dialogName'> Mr Pointer </div>
-            <div class='dialogLastMessage'> <%= text %> куда прешь! </div>
+        <div class='leftSide'>
+            <img src= <%= avatar2 %> alt='avatar'>
+            <div class='chatPreview'>
+                <div class='dialogName'> Tester Benchmarker </div>
+                <div class='dialogLastMessage'> <%= text %> куда прешь! </div>
+            </div>
+        </div>
+        <div class='rightSide'>
+            <p>Вчера</p>
+            <div class='newMessagesCount'><span>213<span></div>
         </div>
     </div>  
     <!-- таких будет много -->
@@ -2017,6 +2040,12 @@ exports.getOrigin = getOrigin;
 
 },{}],"cJM9J":[function(require,module,exports) {
 module.exports = require('./helpers/bundle-url').getBundleURL('8GF3A') + "2.d774a1e6.png" + "?" + Date.now();
+
+},{"./helpers/bundle-url":"chiK4"}],"khiog":[function(require,module,exports) {
+module.exports = require('./helpers/bundle-url').getBundleURL('8GF3A') + "32pxlense.41420206.png" + "?" + Date.now();
+
+},{"./helpers/bundle-url":"chiK4"}],"gF1ZZ":[function(require,module,exports) {
+module.exports = require('./helpers/bundle-url').getBundleURL('8GF3A') + "3dots.b89f6ba6.jpg" + "?" + Date.now();
 
 },{"./helpers/bundle-url":"chiK4"}]},["4NM2i","gWMoH"], "gWMoH", "parcelRequireae13")
 

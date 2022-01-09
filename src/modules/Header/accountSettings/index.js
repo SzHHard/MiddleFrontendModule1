@@ -15,12 +15,11 @@ elem.lastElementChild.lastElementChild.innerHTML = settingsModal;
 //console.log('elem.lastElementChild.lastElementChildTEST2', elem.lastElementChild.lastElementChild)
 
 const theDiv = document.querySelector('.settingsModal')
-//console.log('s0', theDiv)
-//console.log(theDiv.parentElement)
+
 const contentContainer = theDiv.closest('.modalWindowContent')
-//console.log('s1', contentContainer)
+
 contentContainer.innerHTML = settingsModal;
-// console.log('s2', contentContainer)
+
 const modal = contentContainer.closest('.modalWindow');
 modal.addEventListener('click', closeModal)
 
