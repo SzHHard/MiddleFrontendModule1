@@ -5,7 +5,7 @@
   "scripts": {
     "start": "nodemon server/index.js",
     "dev": "parcel index.html --port 3000 --dist-dir build",
-    "build": "parcel build index.html --dist-dir build"
+    "build": "parcel build index.html --dist-dir build && echo '/* /index.html  200' | cat >build/_redirects"
   },
   "author": "",
   "license": "ISC",
