@@ -1,7 +1,7 @@
 export let loginPage = /*html*/`
     <div class='loginContainer'>
         <div class='registerButtonContainer'>
-            <button>Зарегистрироваться <img src=<%= registerRedirectImg %> /> </button> 
+            <button class='registerRedirectButton'>Зарегистрироваться <img src=<%= registerRedirectImg %> /> </button> 
         </div>
         <div class='formContainer'>
             <form>
@@ -20,7 +20,7 @@ export let loginPage = /*html*/`
                 </div>
 
                 <div class='submitContainer'>
-                    <button type='submit' >Войти</button>
+                    <button type='submit' class='enterButton'>Войти</button>
                 </div>
             </form>
         </div>
