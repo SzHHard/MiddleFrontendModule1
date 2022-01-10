@@ -9,5 +9,5 @@
  * npm run build:prod — сборка стабильной версии.
 
 ### Прилигаются следующие ссылки:
-0. Netlify: https://mfbestmessanger.netlify.app
+0 Netlify: https://mfbestmessanger.netlify.app
 0. Original pull request (sprint_1 branch): https://github.com/SzHHard/MiddleFrontendModule1/pull/1
