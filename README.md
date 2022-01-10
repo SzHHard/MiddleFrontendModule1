@@ -3,3 +3,4 @@
 
 Прилигаются следующие ссылки:
 Netlify: https://mfbestmessanger.netlify.app
+Original pull request (sprint_1 branch): https://github.com/SzHHard/MiddleFrontendModule1/pull/1
