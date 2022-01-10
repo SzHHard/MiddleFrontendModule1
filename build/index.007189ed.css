@@ -161,15 +161,20 @@
   color: aqua;
 }
 
+.chatsBlock__chatPreviewContainer:hover {
+  background-color: #f5f6f8;
+}
+
 .chatsBlock__chatPreviewContainer {
+  border-radius: 5px;
+  cursor: pointer;
   width: 95%;
-  height: 50px;
+  height: 70px;
   display: flex;
   flex-direction: row;
   padding-left: 15px;
   padding-right: 15px;
   align-items: center;
-  margin-bottom: 10px;
   border-bottom: 1px solid #dce1e6;
   transform: matrix(1, 0, 0, 1, 0, 0);
 }

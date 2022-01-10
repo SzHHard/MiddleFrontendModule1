@@ -484,7 +484,7 @@ const renderedChat = _ejsDefault.default.render(_chatTmpl.chat, data);
 const elem = document.querySelector('#mainContent');
 if (document.location.pathname === '/currentChat') elem.innerHTML = renderedChat;
 
-},{"ejs":"doTCF","./chat.tmpl":"gqKs8","../../../static/devImages/3dots.jpg":"hZQjx","@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV","../../../static/avatars/szh.jpg":"osIpp","../../../static/devImages/chooseFile.png":"dVZgN","../../../static/devImages/sendMessage.png":"c40r6","../../../static/devImages/back.png":"iWqg1"}],"gqKs8":[function(require,module,exports) {
+},{"ejs":"doTCF","./chat.tmpl":"gqKs8","../../../static/devImages/3dots.jpg":"hZQjx","../../../static/avatars/szh.jpg":"osIpp","../../../static/devImages/chooseFile.png":"dVZgN","../../../static/devImages/sendMessage.png":"c40r6","../../../static/devImages/back.png":"iWqg1","@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV"}],"gqKs8":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "chat", ()=>chat
