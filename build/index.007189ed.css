@@ -175,7 +175,9 @@
   padding-left: 15px;
   padding-right: 15px;
   align-items: center;
+  margin-top: 10px;
   border-bottom: 1px solid #dce1e6;
+  border-top: 1px solid #dce1e6;
   transform: matrix(1, 0, 0, 1, 0, 0);
 }
 .chatsBlock__chatPreviewContainer .leftSide {
@@ -229,7 +231,8 @@
   font-weight: 700;
 }
 .chatsBlock__chatPreviewContainer .chatPreview .dialogLastMessage {
-  padding: 2px;
+  padding: 3px;
+  margin-top: 2px;
   font-family: Roboto;
   font-style: normal;
   font-weight: normal;

@@ -472,7 +472,7 @@ if (window.location.pathname === '/updateInfo') {
     _addModalToImg.addModalToImg();
 }
 
-},{"ejs":"doTCF","./changeData.tmpl":"VZaJO","@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV","../userData/dataObj":"coIaj","../utils/addModalToImg":"5CczO"}],"VZaJO":[function(require,module,exports) {
+},{"ejs":"doTCF","./changeData.tmpl":"VZaJO","../userData/dataObj":"coIaj","../utils/addModalToImg":"5CczO","@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV"}],"VZaJO":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "changeData", ()=>changeData

@@ -460,29 +460,51 @@ function hmrAcceptRun(bundle, id) {
 
 },{}],"gWMoH":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-var _chatsTmplJs = require("./chats.tmpl.js");
 var _ejs = require("ejs");
 var _ejsDefault = parcelHelpers.interopDefault(_ejs);
+var _chatsTmpl = require("./chats.tmpl");
 var _szhJpg = require("../../../static/avatars/szh.jpg");
 var _szhJpgDefault = parcelHelpers.interopDefault(_szhJpg);
 var _2Png = require("../../../static/avatars/2.png");
 var _2PngDefault = parcelHelpers.interopDefault(_2Png);
+var _kindredJpg = require("../../../static/avatars/kindred.jpg");
+var _kindredJpgDefault = parcelHelpers.interopDefault(_kindredJpg);
 var _32PxlensePng = require("../../../static/devImages/32pxlense.png");
 var _32PxlensePngDefault = parcelHelpers.interopDefault(_32PxlensePng);
 var _3DotsJpg = require("../../../static/devImages/3dots.jpg");
 var _3DotsJpgDefault = parcelHelpers.interopDefault(_3DotsJpg);
 let data = {
-    text: 'леее',
-    avatar1: _szhJpgDefault.default,
-    avatar2: _2PngDefault.default,
+    companions: [
+        {
+            name: 'Mr Pointer',
+            lastMessage: 'Леее куда прешь',
+            lastMessageTime: '10:14 am',
+            newMessagesCount: 1,
+            avatar: _szhJpgDefault.default
+        },
+        {
+            name: 'Tester Benchmarker',
+            lastMessage: 'Ну Леее куда прешь',
+            lastMessageTime: 'Вчера',
+            newMessagesCount: 213,
+            avatar: _2PngDefault.default
+        },
+        {
+            name: 'Олег Гатчин-Уточкин',
+            lastMessage: 'кто в наше время не любит уточек? Лично я люблю уточек',
+            lastMessageTime: '4 Jan',
+            newMessagesCount: 2,
+            avatar: _kindredJpgDefault.default
+        }, 
+    ],
     lense: _32PxlensePngDefault.default,
     more: _3DotsJpgDefault.default
 };
-let template = _ejsDefault.default.render(_chatsTmplJs.chats, data);
+let template = _ejsDefault.default.render(_chatsTmpl.chats, data);
 const elem = document.querySelector('#mainContent');
 if (window.location.pathname === '/') elem.innerHTML = template; //потом, возможно, поменять innerHTML на другие слова
 
-},{"ejs":"doTCF","../../../static/avatars/szh.jpg":"bExHq","../../../static/avatars/2.png":"cJM9J","../../../static/devImages/32pxlense.png":"khiog","../../../static/devImages/3dots.jpg":"gF1ZZ","@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV","./chats.tmpl.js":"atDUk"}],"bExHq":[function(require,module,exports) {
+},{"ejs":"doTCF","../../../static/avatars/szh.jpg":"bExHq","../../../static/avatars/2.png":"cJM9J","../../../static/devImages/32pxlense.png":"khiog","../../../static/devImages/3dots.jpg":"gF1ZZ","@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV","./chats.tmpl":"atDUk","../../../static/avatars/kindred.jpg":"2wQPn"}],"bExHq":[function(require,module,exports) {
 module.exports = require('./helpers/bundle-url').getBundleURL('8GF3A') + "szh.722eb98c.jpg" + "?" + Date.now();
 
 },{"./helpers/bundle-url":"chiK4"}],"cJM9J":[function(require,module,exports) {
@@ -499,52 +521,48 @@ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "chats", ()=>chats
 );
-let chats = /* html */ `
-<div class='chatsBlock'>
-    <div class = 'chatsBlock__searchbarContainer'>
-        <div class='left'>    
-            <img class='lense' src= <%= lense %> alt='lense' />
+let chats = /*html*/ `<div class='chatsBlock'>
+    <div class='chatsBlock__searchbarContainer'>
+        <div class='left'>
+            <img class='lense' src=<%=lense %> alt='lense' />
             <input placeholder="Search" />
         </div>
 
         <div class='searchbarContainer__createGroupChatButton'>
-            <img class='more' src=<%= more %> alt='more'/>
+            <img class='more' src=<%=more %> alt='more'/>
         </div>
     </div>
 
 
-    <!-- тут нужно будет сделать цикл с выводом чатов -->
-    <div class='chatsBlock__chatPreviewContainer'>
-        <div class='leftSide'>
-            <img src= <%= avatar1 %> alt='avatar'>
-            <div class='chatPreview'>
-                <div class='dialogName'> Mr Pointer </div>
-                <div class='dialogLastMessage'> <%= text %> куда прешь </div>
-            </div>
-        </div>
-        <div class='rightSide'>
-            <p>10:14 am</p>
-            <div class='newMessagesCount'><span>1<span></div>
-        </div>
 
-    </div>  
-    <div class='chatsBlock__chatPreviewContainer'>
-        <div class='leftSide'>
-            <img src= <%= avatar2 %> alt='avatar'>
-            <div class='chatPreview'>
-                <div class='dialogName'> Tester Benchmarker </div>
-                <div class='dialogLastMessage'> <%= text %> куда прешь! </div>
+    <% companions.forEach(function(companion){ %>
+
+        <div class='chatsBlock__chatPreviewContainer'>
+            <div class='leftSide'>
+                <img src=<%= companion.avatar %> alt='avatar'>
+                <div class='chatPreview'>
+                    <div class='dialogName'>
+                        <%= companion.name %>
+                    </div>
+                    <div class='dialogLastMessage'>
+                        <%= companion.lastMessage %>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class='rightSide'>
-            <p>Вчера</p>
-            <div class='newMessagesCount'><span>213<span></div>
-        </div>
-    </div>  
-    <!-- таких будет много -->
+            <div class='rightSide'>
+                <p><%= companion.lastMessageTime %></p>
+                <div class='newMessagesCount'>
+                    <span> <%= companion.newMessagesCount %> <span></div>
+                </div>
+        </div>            
+    <% }) %>
+        
 </div>
 `;
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV"}]},["4NM2i","gWMoH"], "gWMoH", "parcelRequireae13")
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV"}],"2wQPn":[function(require,module,exports) {
+module.exports = require('./helpers/bundle-url').getBundleURL('8GF3A') + "kindred.00e42966.jpg" + "?" + Date.now();
+
+},{"./helpers/bundle-url":"chiK4"}]},["4NM2i","gWMoH"], "gWMoH", "parcelRequireae13")
 
 //# sourceMappingURL=index.556c0ea0.js.map
