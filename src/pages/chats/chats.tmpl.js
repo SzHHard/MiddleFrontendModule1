@@ -1,7 +1,9 @@
 
 
 
-export let chats = /*html*/ `<div class='chatsBlock'>
+export let chats = /*html*/ 
+`
+<div class='chatsBlock'>
     <div class='chatsBlock__searchbarContainer'>
         <div class='left'>
             <img class='lense' src=<%=lense %> alt='lense' />
@@ -32,9 +34,10 @@ export let chats = /*html*/ `<div class='chatsBlock'>
             <div class='rightSide'>
                 <p><%= companion.lastMessageTime %></p>
                 <div class='newMessagesCount'>
-                    <span> <%= companion.newMessagesCount %> <span></div>
+                     <span> <%= companion.newMessagesCount %> </span> 
                 </div>
-        </div>            
+            </div>       
+        </div>         
     <% }) %>
         
 </div>

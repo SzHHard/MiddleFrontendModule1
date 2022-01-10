@@ -7,10 +7,13 @@
     display: flex;
     flex-direction: column;
     padding: 10px;
-    margin-top: 30px;
+    //margin-top: 30px;
     //justify-self: center;
     align-self: center;
-
+    position: absolute;
+    bottom: -16px; 
+    
+    
     .chatsBlock__searchbarContainer {
         height: 40px;
         display: flex;
@@ -79,7 +82,7 @@
     }
     .rightSide {
         margin-right: 10px;
-        margin-top: -5px;
+        margin-top: 1px;
         margin-bottom: 5px;
         width: 85px;
         display: flex;
@@ -98,8 +101,8 @@
         .newMessagesCount {
             min-width: 30px;
             min-height: 30px;
-            background-color: #688DEC;
-            border-radius: 500px;
+           
+            border-radius: 50px;
             display: flex;
             justify-content: center;
             align-content: center;
@@ -109,9 +112,16 @@
             font-weight: normal;
             font-size: 16px;
             color: #ffffff;
+            background-color: #af60e4;
+            padding: 1px;
+            padding-right: 5px;
+            padding-left: 5px;
 
             span{
+                //border-radius: 18px;
+                //background: aqua;
                 align-self: center;
+
             }
         }
     }

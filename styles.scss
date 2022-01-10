@@ -16,6 +16,7 @@ body{
     background-color: #FAEDFC;
     height: 100%;
     margin: 0;
+    overflow: hidden;
 }
 
 .mainContent{
@@ -23,10 +24,11 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    
 }
 
 .root{
-
+   
     display: flex;
     flex-direction: column;
 }
