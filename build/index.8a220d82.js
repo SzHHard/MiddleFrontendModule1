@@ -472,7 +472,7 @@ if (document.location.pathname === '/account') {
     _addModalToImg.addModalToImg();
 }
 
-},{"ejs":"doTCF","./settings.tmpl":"9zCxS","@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV","./utils/addModalToImg":"5CczO","./userData/dataObj":"coIaj"}],"9zCxS":[function(require,module,exports) {
+},{"ejs":"doTCF","./settings.tmpl":"9zCxS","./userData/dataObj":"coIaj","./utils/addModalToImg":"5CczO","@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV"}],"9zCxS":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "settings", ()=>settings
@@ -508,7 +508,27 @@ let settings = /*html*/ `
     </div>
 `;
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV"}],"5CczO":[function(require,module,exports) {
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV"}],"coIaj":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "userData", ()=>userData
+);
+var _kindredJpg = require("../../../../static/avatars/kindred.jpg");
+var _kindredJpgDefault = parcelHelpers.interopDefault(_kindredJpg);
+let userData = {
+    userAvatar: _kindredJpgDefault.default,
+    username: 'IvanChick.clueyou',
+    userEmail: 'pochta@yandex.ru',
+    userLogin: 'ivanIvanov',
+    userFirstName: 'Иван',
+    userSecondName: 'Иванов',
+    userPhoneNumber: '+7-800-555-35-35'
+};
+
+},{"../../../../static/avatars/kindred.jpg":"4Ve3O","@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV"}],"4Ve3O":[function(require,module,exports) {
+module.exports = require('./helpers/bundle-url').getBundleURL('7C0vQ') + "kindred.00e42966.jpg" + "?" + Date.now();
+
+},{"./helpers/bundle-url":"chiK4"}],"5CczO":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "addModalToImg", ()=>addModalToImg
@@ -519,7 +539,7 @@ const addModalToImg = ()=>{
     img.addEventListener('click', _handleModal.openModal);
 };
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV","../changeAvatarModal/handleModal":"5ZBIr"}],"5ZBIr":[function(require,module,exports) {
+},{"../changeAvatarModal/handleModal":"5ZBIr","@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV"}],"5ZBIr":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "openModal", ()=>openModal
@@ -547,7 +567,7 @@ function closeModal(e) {
     e.target.firstElementChild.classList.remove('active');
 }
 
-},{"../../../modules/modal/modal.tmpl":"5ogG9","ejs":"doTCF","@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV","./content.tmpl":"l5RV3"}],"l5RV3":[function(require,module,exports) {
+},{"../../../modules/modal/modal.tmpl":"5ogG9","./content.tmpl":"l5RV3","ejs":"doTCF","@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV"}],"l5RV3":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "modalContentTemplate", ()=>modalContentTemplate
@@ -566,26 +586,6 @@ let data = {
 };
 let modalContentTemplate = _ejsDefault.default.render(modalContent, data);
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV","ejs":"doTCF"}],"coIaj":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "userData", ()=>userData
-);
-var _kindredJpg = require("../../../../static/avatars/kindred.jpg");
-var _kindredJpgDefault = parcelHelpers.interopDefault(_kindredJpg);
-let userData = {
-    userAvatar: _kindredJpgDefault.default,
-    username: 'IvanChick.clueyou',
-    userEmail: 'pochta@yandex.ru',
-    userLogin: 'ivanIvanov',
-    userFirstName: 'Иван',
-    userSecondName: 'Иванов',
-    userPhoneNumber: '+7-800-555-35-35'
-};
-
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV","../../../../static/avatars/kindred.jpg":"4Ve3O"}],"4Ve3O":[function(require,module,exports) {
-module.exports = require('./helpers/bundle-url').getBundleURL('7C0vQ') + "kindred.00e42966.jpg" + "?" + Date.now();
-
-},{"./helpers/bundle-url":"chiK4"}]},["3Ocly","cl2Ir"], "cl2Ir", "parcelRequireae13")
+},{"ejs":"doTCF","@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV"}]},["3Ocly","cl2Ir"], "cl2Ir", "parcelRequireae13")
 
 //# sourceMappingURL=index.8a220d82.js.map

@@ -475,7 +475,7 @@ elem.innerHTML = template; //потом, возможно, поменять inne
 const accountModalImg = document.querySelector('#accountModalImg');
 accountModalImg.addEventListener('click', _index.openModal);
 
-},{"./header.template":"47JZZ","ejs":"doTCF","../../../static/avatars/kindred.jpg":"btvEQ","@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV","./accountSettings/index":"g48VG"}],"47JZZ":[function(require,module,exports) {
+},{"./header.template":"47JZZ","ejs":"doTCF","../../../static/avatars/kindred.jpg":"btvEQ","./accountSettings/index":"g48VG","@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV"}],"47JZZ":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "headerTemplate", ()=>headerTemplate
@@ -492,7 +492,42 @@ let headerTemplate = /* html */ `
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV"}],"btvEQ":[function(require,module,exports) {
 module.exports = require('./helpers/bundle-url').getBundleURL('Vfjsz') + "kindred.00e42966.jpg" + "?" + Date.now();
 
-},{"./helpers/bundle-url":"chiK4"}],"g48VG":[function(require,module,exports) {
+},{"./helpers/bundle-url":"chiK4"}],"chiK4":[function(require,module,exports) {
+"use strict";
+var bundleURL = {
+};
+function getBundleURLCached(id) {
+    var value = bundleURL[id];
+    if (!value) {
+        value = getBundleURL();
+        bundleURL[id] = value;
+    }
+    return value;
+}
+function getBundleURL() {
+    try {
+        throw new Error();
+    } catch (err) {
+        var matches = ('' + err.stack).match(/(https?|file|ftp):\/\/[^)\n]+/g);
+        if (matches) // The first two stack frames will be this function and getBundleURLCached.
+        // Use the 3rd one, which will be a runtime in the original bundle.
+        return getBaseURL(matches[2]);
+    }
+    return '/';
+}
+function getBaseURL(url) {
+    return ('' + url).replace(/^((?:https?|file|ftp):\/\/.+)\/[^/]+$/, '$1') + '/';
+} // TODO: Replace uses with `new URL(url).origin` when ie11 is no longer supported.
+function getOrigin(url) {
+    var matches = ('' + url).match(/(https?|file|ftp):\/\/[^/]+/);
+    if (!matches) throw new Error('Origin not found');
+    return matches[0];
+}
+exports.getBundleURL = getBundleURLCached;
+exports.getBaseURL = getBaseURL;
+exports.getOrigin = getOrigin;
+
+},{}],"g48VG":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "openModal", ()=>openModal
